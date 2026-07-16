@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  --color-midnight: #020617;
+  --color-slate-sidebar: #0f172a;
+  --color-slate-card: #1e293b;
+  --color-gold: #deff9a;
+  --color-brass: #c9f57d;
+  --color-accent: var(--color-gold);
+
+  /* Brand Core Identity Lock */
+  --color-zip-dark-canvas: #0B0F19;
+  --color-zip-dark-surface: #1E293B;
+  --color-zip-dark-border: #334155;
+  --color-zip-electric: #2563EB;
+  --color-zip-electric-glow: rgba(37, 99, 235, 0.15);
+  --color-zip-quantum: #10B981;
+  --color-zip-quantum-glow: rgba(16, 185, 129, 0.15);
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  --shadow-zip-glow: 0 0 20px 0 rgba(37, 99, 235, 0.1);
+  --shadow-quantum-glow: 0 0 20px 0 rgba(16, 185, 129, 0.1);
+
+  --animate-shimmer-fast: shimmer-fast 1.5s ease-in-out infinite;
+
+  @keyframes shimmer-fast {
+    0%, 100% {
+      opacity: 1;
+      filter: brightness(1);
+    }
+    50% {
+      opacity: 0.8;
+      filter: brightness(1.4);
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-midnight text-slate-200 antialiased font-sans;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-slate-800/40 backdrop-blur-md border border-slate-700/50 rounded-2xl hover:border-gold/30 transition-all duration-300;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .glass-card, div, section, article {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: black !important;
+    backdrop-filter: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  p, h1, h2, h3, span, li, tr, td, th {
+    color: black !important;
+  }
+
+  .text-gold, .text-\[\#deff9a\], .text-emerald-400 {
+    color: black !important;
+    font-weight: bold !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+}
+
+.print-only {
+  display: none;
+}
+
+.gold-gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-gold to-white animate-shimmer-fast;
+  will-change: opacity, filter;
+}
+
+.gold-button {
+  @apply bg-gold hover:bg-brass text-midnight font-bold px-6 py-2.5 rounded-xl transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.2)] hover:shadow-[0_0_25px_rgba(212,175,55,0.4)];
+}
+
+.sidebar-link-active {
+  @apply bg-slate-800 text-gold border border-slate-700 shadow-[inset_0_0_10px_rgba(212,175,55,0.05)];
+}
