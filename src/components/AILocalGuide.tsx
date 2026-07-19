@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { motion } from 'motion/react';
 import { Bot, Sparkles, Zap, Globe, Home, Shield } from 'lucide-react';
 import { useI18n } from '../lib/i18n';
@@ -13,7 +13,7 @@ export const AILocalGuide: React.FC<AILocalGuideProps> = ({ districtId, countryI
   
   const stats = getInfrastructureData(districtId);
   
-  const getAISummary = () => {
+  const summaryData = useMemo(() => {
     const name = districtId.replace(/-/g, ' ').toUpperCase() || 'this region';
     const isMajorHub = stats.deliveryCheck.status === 'Instant';
     
@@ -50,9 +50,9 @@ export const AILocalGuide: React.FC<AILocalGuideProps> = ({ districtId, countryI
     let economic = `The Economic Index for ${name} is currently rated as ${isMajorHub ? 'Premium Plus' : 'Emerging Industrial'}. Estimated monthly rental for a standard residential/office unit in this ZIP node is approximately ${est}, factoring in current market liquidity and the verified ${stats.financeIdentifiers.label} access.`;
 
     return { logistics, connectivity, economic };
-  };
+  }, [districtId, stats]);
 
-  const ai = getAISummary();
+  const ai = summaryData;
 
   return (
     <motion.div

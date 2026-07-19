@@ -1,4 +1,5 @@
 import express from "express";
+import compression from "compression";
 import path from "path";
 import app from "./api/index";
 
@@ -6,6 +7,7 @@ const PORT = 3000;
 
 // Vite middleware and Server start
 async function startApp() {
+  
   if (process.env.NODE_ENV !== "production") {
     const { createServer: createViteServer } = await import("vite");
     const vite = await createViteServer({
@@ -15,7 +17,10 @@ async function startApp() {
     app.use(vite.middlewares);
   } else {
     const distPath = path.join(process.cwd(), 'dist');
-    app.use(express.static(distPath));
+    app.use(express.static(distPath, {
+      maxAge: '1y',
+      etag: true
+    }));
     app.get('*all', (_req, res) => {
       res.sendFile(path.join(distPath, 'index.html'));
     });

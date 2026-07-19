@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'motion/react';
 import { Cpu, ArrowRight, Zap, Database, MapPin, ChevronRight, Hash, Heart, Download } from 'lucide-react';
@@ -26,7 +26,7 @@ export default function Home() {
   }, []);
 
 
-  const toggleFavorite = (item: SearchResult) => {
+  const toggleFavorite = useCallback((item: SearchResult) => {
     const isFav = favorites.some(f => f.id === item.id);
     let newFavs;
     if (isFav) {
@@ -36,7 +36,7 @@ export default function Home() {
     }
     setFavorites(newFavs);
     localStorage.setItem('favorite-localities', JSON.stringify(newFavs));
-  };
+  }, [favorites]);
 
   const handleDownloadReport = (item: SearchResult) => {
     const printContent = `

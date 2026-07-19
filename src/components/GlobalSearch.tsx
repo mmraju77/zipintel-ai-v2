@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Search, Loader2, Zap, Hash, MapPin, ChevronRight, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -47,7 +47,7 @@ export const GlobalSearch: React.FC = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const handleSearch = async (val: string) => {
+  const handleSearch = useCallback(async (val: string) => {
     setQuery(val);
     const trimmed = val.trim();
     if (trimmed.length < 2) {
@@ -105,13 +105,13 @@ export const GlobalSearch: React.FC = () => {
     setResults(suggestions.slice(0, 8));
     setShowDropdown(true);
     setIsSearching(false);
-  };
+  }, [navigate]);
 
-  const handleSelect = (result: SearchResult) => {
+  const handleSelect = useCallback((result: SearchResult) => {
     navigate(result.path);
     setShowDropdown(false);
     setQuery('');
-  };
+  }, [navigate]);
 
   return (
     <div className="relative max-w-2xl mx-auto z-50 mt-8" ref={dropdownRef}>

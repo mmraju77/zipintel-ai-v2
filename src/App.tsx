@@ -4,10 +4,10 @@ import { HelmetProvider } from 'react-helmet-async';
 import { I18nProvider } from './lib/i18n';
 import Layout from './components/Layout';
 import Home from './pages/Home';
-import CountryPage from './pages/CountryPage';
-import AITools from './pages/AIToolsPage';
-import Dashboard from './pages/Dashboard';
-import AboutUs from './pages/AboutUs';
+const CountryPage = React.lazy(() => import('./pages/CountryPage'));
+const AITools = React.lazy(() => import('./pages/AIToolsPage'));
+const Dashboard = React.lazy(() => import('./pages/Dashboard'));
+const AboutUs = React.lazy(() => import('./pages/AboutUs'));
 
 declare global {
   interface Window {
@@ -49,7 +49,8 @@ export default function App() {
       <I18nProvider>
         <BrowserRouter>
           <Layout>
-            <Routes>
+            <React.Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-[#0B0F19]"><div className="w-8 h-8 border-4 border-gold border-t-transparent rounded-full animate-spin"></div></div>}>
+              <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<AboutUs />} />
               <Route path="/dashboard" element={<Dashboard />} />
@@ -60,6 +61,7 @@ export default function App() {
               <Route path="/:countryId/:l1/:l2" element={<CountryPage />} />
               <Route path="/:countryId/:l1/:l2/:l3" element={<CountryPage />} />
             </Routes>
+            </React.Suspense>
           </Layout>
         </BrowserRouter>
       </I18nProvider>

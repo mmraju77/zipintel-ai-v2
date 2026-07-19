@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { motion } from 'motion/react';
 import { Wifi, Truck, ShoppingBag, Landmark, Shield, CreditCard } from 'lucide-react';
 import { useI18n } from '../lib/i18n';
@@ -29,7 +29,7 @@ export const InfrastructureInsights: React.FC<InfrastructureInsightsProps> = ({ 
   const zip = (zipCode || '530001').trim();
 
   // 17 Target Countries Deterministic Matrix Engine
-  const getRoutingMatrix = (): FinancialMetadata => {
+  const matrix = useMemo((): FinancialMetadata => {
     switch (code) {
       case 'in':
       case 'india':
@@ -110,9 +110,7 @@ export const InfrastructureInsights: React.FC<InfrastructureInsightsProps> = ({ 
           themeColor: "text-slate-400"
         };
     }
-  };
-
-  const matrix = getRoutingMatrix();
+  }, [code, zip]);
 
   const container = {
     hidden: { opacity: 0 },
