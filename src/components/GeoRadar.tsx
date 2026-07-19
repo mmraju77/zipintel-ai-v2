@@ -16,7 +16,7 @@ export const GeoRadar: React.FC<GeoRadarProps> = ({ district, coords, language }
 
   React.useEffect(() => {
     // Neural focus calibration on district shift
-    console.log(`[GeoRadar] Calibrating focus to: ${districtId || 'Global'}`);
+     // console.log(`[GeoRadar] Calibrating focus to: ${districtId || 'Global'}`);
   }, [districtId]);
 
   return (

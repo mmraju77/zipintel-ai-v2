@@ -35,7 +35,7 @@ export const DistanceCalculator: React.FC<DistanceCalculatorProps> = ({
   React.useEffect(() => {
     // Reset or update internal routing matrix on district change
     if (districtId) {
-      console.log(`[DistanceCalculator] Updating routing matrix for: ${districtId}`);
+       // console.log(`[DistanceCalculator] Updating routing matrix for: ${districtId}`);
     }
   }, [districtId]);
 
