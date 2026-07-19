@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Search, Loader2, Zap, Hash, MapPin, ChevronRight, ArrowRight } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { COUNTRIES, SearchResult } from '../types';
 
 const ANCHOR_NODES = [
@@ -36,6 +36,8 @@ export const GlobalSearch: React.FC = React.memo(() => {
   const [showDropdown, setShowDropdown] = useState(false);
   const navigate = useNavigate();
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const [searchParams] = useSearchParams();
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -106,6 +108,14 @@ export const GlobalSearch: React.FC = React.memo(() => {
     setShowDropdown(true);
     setIsSearching(false);
   }, [navigate]);
+
+
+  useEffect(() => {
+    const q = searchParams.get('q');
+    if (q) {
+      handleSearch(q);
+    }
+  }, [searchParams, handleSearch]);
 
   const handleSelect = useCallback((result: SearchResult) => {
     navigate(result.path);
