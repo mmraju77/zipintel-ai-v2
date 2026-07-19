@@ -1,5 +1,5 @@
+import { SEO } from '../components/SEO';
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { motion } from 'motion/react';
 import { Zap, Copy, Check, Loader2, Sparkles, Languages, Search, Hash, Download, MapPin, Database, Target } from 'lucide-react';
 import { useI18n } from '../lib/i18n';
@@ -159,11 +159,12 @@ export default function AITools() {
   };
 
   return (
+    
     <div className="relative min-h-screen pb-20">
-      <Helmet>
-        <title>AI Address Utilities | ZipIntel AI</title>
-        <meta name="description" content="Use advanced Gemini AI to standardize addresses and get locality insights globally." />
-      </Helmet>
+            <SEO 
+        title={`AI Development Environment - ZipIntel AI Framework`}
+        description={`Explore the Global Intelligence Protocol architecture.`}
+      />
 
       {/* Hero Orbit Deco */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-6xl aspect-square pointer-events-none opacity-20 overflow-hidden">
@@ -197,7 +198,7 @@ export default function AITools() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tighter uppercase italic leading-tight lg:leading-none break-words">
             AI <span className="gold-gradient-text uppercase">{t('aiUtilities').split(' ')[1] || 'Utilities'}</span>
           </h1>
-          <p className="text-slate-500 max-w-xl mx-auto font-medium">
+          <p className="text-slate-400 max-w-xl mx-auto font-medium">
             {t('neuralPoweredTools')}
           </p>
         </div>
@@ -216,7 +217,7 @@ export default function AITools() {
                 </div>
                 <div>
                   <h2 className="text-xl font-black text-white uppercase italic leading-tight">{t('addressStandardizer')}</h2>
-                  <p className="text-sm text-slate-500 font-bold uppercase tracking-[3px]">{t('normalizeMessyInput')}</p>
+                  <p className="text-sm text-slate-400 font-bold uppercase tracking-[3px]">{t('normalizeMessyInput')}</p>
                 </div>
               </div>
 
@@ -229,7 +230,7 @@ export default function AITools() {
 
               <div className="space-y-6">
                 <div>
-                  <label className="text-sm font-black text-slate-500 uppercase tracking-widest mb-3 block italic">{t('pasteMessyAddress')}</label>
+                  <label className="text-sm font-black text-slate-400 uppercase tracking-widest mb-3 block italic">{t('pasteMessyAddress')}</label>
                   <textarea
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
@@ -300,14 +301,14 @@ export default function AITools() {
                 </div>
                 <div>
                   <h2 className="text-xl font-black text-white uppercase italic leading-tight">{t('distanceCalculator')}</h2>
-                  <p className="text-sm text-slate-500 font-bold uppercase tracking-[3px]">Geospatial Routing Node</p>
+                  <p className="text-sm text-slate-400 font-bold uppercase tracking-[3px]">Geospatial Routing Node</p>
                 </div>
               </div>
 
               <form onSubmit={handleCalculateDistance} className="space-y-6">
                 <div className="space-y-4">
                   <div>
-                    <label className="text-sm font-black text-slate-500 uppercase tracking-widest mb-3 block italic">{t('source')}</label>
+                    <label className="text-sm font-black text-slate-400 uppercase tracking-widest mb-3 block italic">{t('source')}</label>
                     <input
                       value={distSource}
                       onChange={(e) => setDistSource(e.target.value)}
@@ -316,7 +317,7 @@ export default function AITools() {
                     />
                   </div>
                   <div>
-                    <label className="text-sm font-black text-slate-500 uppercase tracking-widest mb-3 block italic">{t('destination')}</label>
+                    <label className="text-sm font-black text-slate-400 uppercase tracking-widest mb-3 block italic">{t('destination')}</label>
                     <input
                       value={distDest}
                       onChange={(e) => setDistDest(e.target.value)}
@@ -359,7 +360,7 @@ export default function AITools() {
                   <p className="text-slate-300 text-base font-medium leading-relaxed italic">
                     "{distResult.insight}"
                   </p>
-                  <div className="flex items-center gap-2 text-sm font-bold text-slate-500 uppercase">
+                  <div className="flex items-center gap-2 text-sm font-bold text-slate-400 uppercase">
                     <Zap className="w-3 h-3 text-gold" /> Estimated Time: {distResult.estimate}
                   </div>
                 </div>
@@ -382,13 +383,13 @@ export default function AITools() {
                 </div>
                 <div>
                   <h2 className="text-xl font-black text-white uppercase italic leading-tight">{t('localityInsights')}</h2>
-                  <p className="text-sm text-slate-500 font-bold uppercase tracking-[3px]">{t('areaContextAnalysis')}</p>
+                  <p className="text-sm text-slate-400 font-bold uppercase tracking-[3px]">{t('areaContextAnalysis')}</p>
                 </div>
               </div>
 
               <div className="space-y-6">
                 <div>
-                  <label className="text-sm font-black text-slate-500 uppercase tracking-widest mb-3 block italic">{t('areaNameOrZip')}</label>
+                  <label className="text-sm font-black text-slate-400 uppercase tracking-widest mb-3 block italic">{t('areaNameOrZip')}</label>
                   <input
                     type="text"
                     value={postalQuery}
@@ -438,15 +439,15 @@ export default function AITools() {
         {/* Footnotes / Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
            <div className="glass-card p-6 border-slate-800/50">
-              <p className="text-xs text-slate-500 font-black uppercase tracking-widest mb-1">Live Endpoint</p>
+              <p className="text-xs text-slate-400 font-black uppercase tracking-widest mb-1">Live Endpoint</p>
               <p className="text-sm font-bold text-white font-mono">api.v4.normalize.zipintel.ai</p>
            </div>
            <div className="glass-card p-6 border-slate-800/50">
-              <p className="text-xs text-slate-500 font-black uppercase tracking-widest mb-1">Latency Avg</p>
+              <p className="text-xs text-slate-400 font-black uppercase tracking-widest mb-1">Latency Avg</p>
               <p className="text-sm font-bold text-emerald-500 font-mono">412ms</p>
            </div>
            <div className="glass-card p-6 border-slate-800/50">
-              <p className="text-xs text-slate-500 font-black uppercase tracking-widest mb-1">Node Status</p>
+              <p className="text-xs text-slate-400 font-black uppercase tracking-widest mb-1">Node Status</p>
               <p className="text-sm font-bold text-gold font-mono uppercase">Decentralized / Active</p>
            </div>
         </div>

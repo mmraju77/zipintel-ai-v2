@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { I18nProvider } from './lib/i18n';
 import Layout from './components/Layout';
+import { SEO } from './components/SEO';
 import Home from './pages/Home';
 const CountryPage = React.lazy(() => import('./pages/CountryPage'));
 const AITools = React.lazy(() => import('./pages/AIToolsPage'));
@@ -46,6 +47,7 @@ export default function App() {
 
   return (
     <HelmetProvider>
+      <SEO />
       <I18nProvider>
         <BrowserRouter>
           <Layout>

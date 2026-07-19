@@ -47,7 +47,7 @@ export const DistanceCalculator: React.FC<DistanceCalculatorProps> = ({
         </div>
         <div className="space-y-0.5">
           <h3 className="text-sm font-black text-white uppercase tracking-widest italic">{language === 'te' ? 'తపాలా దూర గణన' : 'Postal Distance Calculator'}</h3>
-          <p className="text-sm font-bold text-slate-500 uppercase tracking-widest">
+          <p className="text-sm font-bold text-slate-400 uppercase tracking-widest">
             {language === 'te' ? `${districtName} లాజిస్టిక్స్ అంచనా` : `Estimate ${districtName} Logistics Coverage`}
           </p>
         </div>
@@ -56,7 +56,7 @@ export const DistanceCalculator: React.FC<DistanceCalculatorProps> = ({
       <form onSubmit={onCalculate} className="space-y-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="space-y-2">
-            <label className="text-sm font-black text-slate-500 uppercase tracking-[0.2em] block">{language === 'te' ? 'ప్రారంభం' : 'Source Area'}</label>
+            <label className="text-sm font-black text-slate-400 uppercase tracking-[0.2em] block">{language === 'te' ? 'ప్రారంభం' : 'Source Area'}</label>
             <input
               value={distSource}
               onChange={(e) => setDistSource(e.target.value)}
@@ -65,7 +65,7 @@ export const DistanceCalculator: React.FC<DistanceCalculatorProps> = ({
             />
           </div>
           <div className="space-y-2">
-            <label className="text-sm font-black text-slate-500 uppercase tracking-[0.2em] block">{language === 'te' ? 'గమ్యం' : 'Destination Area'}</label>
+            <label className="text-sm font-black text-slate-400 uppercase tracking-[0.2em] block">{language === 'te' ? 'గమ్యం' : 'Destination Area'}</label>
             <input
               value={distDest}
               onChange={(e) => setDistDest(e.target.value)}
@@ -148,7 +148,7 @@ export const DistanceCalculator: React.FC<DistanceCalculatorProps> = ({
               </div>
             </div>
 
-            <p className="text-sm text-slate-500 font-medium italic border-l border-gold/20 pl-3">
+            <p className="text-sm text-slate-400 font-medium italic border-l border-gold/20 pl-3">
               "{distResult.insight}"
             </p>
           </motion.div>

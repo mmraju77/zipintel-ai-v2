@@ -72,7 +72,7 @@ export const CommunityLayer: React.FC = React.memo(() => {
             {/* Upvote Button */}
             <button 
               onClick={() => handleVote(c.id)}
-              className="flex flex-col items-center justify-center px-2 py-1 bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded text-slate-500 hover:text-emerald-400 transition-colors"
+              className="flex flex-col items-center justify-center px-2 py-1 bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded text-slate-400 hover:text-emerald-400 transition-colors"
             >
               <span className="text-xl">▲</span>
               <span className="text-sm font-mono font-bold mt-0.5">{votes[c.id] || 0}</span>

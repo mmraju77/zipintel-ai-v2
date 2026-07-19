@@ -144,11 +144,11 @@ export const InfrastructureInsights: React.FC<InfrastructureInsightsProps> = Rea
         </div>
         <div className="space-y-4">
           <div>
-            <p className="text-xs font-black text-slate-500 uppercase tracking-widest mb-1">{t('networkInternetStatus')}</p>
+            <p className="text-xs font-black text-slate-400 uppercase tracking-widest mb-1">{t('networkInternetStatus')}</p>
             <h3 className="text-xl font-black text-white italic tracking-tighter">{stats.internetStatus.avgSpeed}</h3>
           </div>
           <div className="p-2.5 bg-slate-950 border border-slate-800 rounded-2xl flex flex-col gap-1">
-            <span className="text-xs font-bold text-slate-500 uppercase">{t('activeProviders')}</span>
+            <span className="text-xs font-bold text-slate-400 uppercase">{t('activeProviders')}</span>
             <span className="text-xs font-black text-slate-200">{stats.internetStatus.provider}</span>
           </div>
         </div>
@@ -164,11 +164,11 @@ export const InfrastructureInsights: React.FC<InfrastructureInsightsProps> = Rea
         </div>
         <div className="space-y-4">
           <div>
-            <p className="text-xs font-black text-slate-500 uppercase tracking-widest mb-1">{t('logisticsCourierHubs')}</p>
+            <p className="text-xs font-black text-slate-400 uppercase tracking-widest mb-1">{t('logisticsCourierHubs')}</p>
             <h3 className="text-xl font-black text-white italic tracking-tighter">{stats.logisticsHubs.mainPartner}</h3>
           </div>
           <div className="p-2.5 bg-slate-950 border border-slate-800 rounded-2xl flex flex-col gap-1">
-            <span className="text-xs font-bold text-slate-500 uppercase">Nearest Hub Node</span>
+            <span className="text-xs font-bold text-slate-400 uppercase">Nearest Hub Node</span>
             <span className="text-xs font-black text-slate-200">{stats.logisticsHubs.nearestHub}</span>
           </div>
         </div>
@@ -187,11 +187,11 @@ export const InfrastructureInsights: React.FC<InfrastructureInsightsProps> = Rea
         </div>
         <div className="space-y-4">
           <div>
-            <p className="text-xs font-black text-slate-500 uppercase tracking-widest mb-1">{t('ecommerceDeliveryCheck')}</p>
+            <p className="text-xs font-black text-slate-400 uppercase tracking-widest mb-1">{t('ecommerceDeliveryCheck')}</p>
             <h3 className="text-xl font-black text-white italic tracking-tighter">{stats.deliveryCheck.eta}</h3>
           </div>
           <div className="p-2.5 bg-slate-950 border border-slate-800 rounded-2xl flex flex-col gap-1">
-            <span className="text-xs font-bold text-slate-500 uppercase">Active Channels</span>
+            <span className="text-xs font-bold text-slate-400 uppercase">Active Channels</span>
             <span className="text-xs font-black text-slate-200">{stats.deliveryCheck.platforms}</span>
           </div>
         </div>
@@ -207,14 +207,14 @@ export const InfrastructureInsights: React.FC<InfrastructureInsightsProps> = Rea
         </div>
         <div className="space-y-4">
           <div>
-            <p className="text-xs font-black text-slate-500 uppercase tracking-widest mb-1">{t('regionalFinancialIdentifiers')}</p>
+            <p className="text-xs font-black text-slate-400 uppercase tracking-widest mb-1">{t('regionalFinancialIdentifiers')}</p>
             <h3 className="text-xl font-black text-white italic tracking-tighter uppercase">
               {stats.financeIdentifiers.code}
             </h3>
           </div>
           <div className="p-3 rounded-2xl bg-indigo-500/5 border border-indigo-500/10 space-y-2">
             <div className="flex justify-between items-center">
-              <span className="text-xs font-bold text-slate-500 uppercase">{stats.financeIdentifiers.label}</span>
+              <span className="text-xs font-bold text-slate-400 uppercase">{stats.financeIdentifiers.label}</span>
               <span className="text-xs font-black text-indigo-400 uppercase">Verified</span>
             </div>
             <div className="h-1 w-full bg-slate-800 rounded-full overflow-hidden">
@@ -241,7 +241,7 @@ export const InfrastructureInsights: React.FC<InfrastructureInsightsProps> = Rea
         </div>
         <div className="space-y-4 relative z-10">
           <div>
-            <p className="text-xs font-black text-slate-500 uppercase tracking-widest mb-1">{t('regionalFinancialIdentifiers')}</p>
+            <p className="text-xs font-black text-slate-400 uppercase tracking-widest mb-1">{t('regionalFinancialIdentifiers')}</p>
             <h3 className="text-base font-black text-white tracking-widest uppercase">
               {matrix.bankName}
             </h3>
@@ -250,11 +250,11 @@ export const InfrastructureInsights: React.FC<InfrastructureInsightsProps> = Rea
           <div className="p-3 rounded-2xl bg-slate-950/80 border border-slate-800 space-y-3">
             <div className="flex justify-between items-center bg-gold/5 p-2 rounded-lg border border-gold/10">
                <div>
-                  <p className="text-xs font-bold text-slate-500 uppercase">{matrix.label}</p>
+                  <p className="text-xs font-bold text-slate-400 uppercase">{matrix.label}</p>
                   <p className={`text-sm font-black tracking-widest ${matrix.themeColor}`}>{matrix.value}</p>
                </div>
                <div className="text-right">
-                  <p className="text-xs font-bold text-slate-500 uppercase">Clearance</p>
+                  <p className="text-xs font-bold text-slate-400 uppercase">Clearance</p>
                   <p className="text-xs font-black text-gold uppercase tracking-tighter">Synchronized</p>
                </div>
             </div>
@@ -262,7 +262,7 @@ export const InfrastructureInsights: React.FC<InfrastructureInsightsProps> = Rea
             {matrix.subLabel && (
               <div className="flex justify-between items-center bg-gold/5 p-2 rounded-lg border border-gold/10">
                 <div>
-                    <p className="text-xs font-bold text-slate-500 uppercase">{matrix.subLabel}</p>
+                    <p className="text-xs font-bold text-slate-400 uppercase">{matrix.subLabel}</p>
                     <p className="text-base font-black text-white tracking-widest">{matrix.subValue}</p>
                 </div>
               </div>
@@ -273,7 +273,7 @@ export const InfrastructureInsights: React.FC<InfrastructureInsightsProps> = Rea
                  <div className="w-4 h-4 rounded-full bg-gold/20 border border-gold/40" />
                  <div className="w-4 h-4 rounded-full bg-slate-800 border border-slate-700" />
               </div>
-              <span className="text-[7px] font-black text-slate-500 uppercase tracking-widest italic">ISO 20022 Compliant Node</span>
+              <span className="text-[7px] font-black text-slate-400 uppercase tracking-widest italic">ISO 20022 Compliant Node</span>
             </div>
           </div>
         </div>

@@ -87,7 +87,7 @@ export const AffiliateWidgets: React.FC<AffiliateWidgetsProps> = React.memo(({ c
             <button className="w-full bg-[#deff9a] hover:bg-[#c9f57d] text-midnight py-4 rounded-xl font-black text-sm uppercase tracking-widest transition-all flex items-center justify-center gap-2 active:scale-95 group/btn">
               {offer.cta} <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
             </button>
-            <p className="text-center text-sm text-slate-500 mt-3 font-bold uppercase tracking-widest italic">
+            <p className="text-center text-sm text-slate-400 mt-3 font-bold uppercase tracking-widest italic">
               * Sponsor verified for {region} sector
             </p>
           </div>
@@ -109,7 +109,7 @@ export const AffiliateWidgets: React.FC<AffiliateWidgetsProps> = React.memo(({ c
             <span className="text-sm font-black uppercase tracking-[0.2em]">Live Intel Feed</span>
           </div>
           <h3 className="text-sm font-black text-white tracking-tighter mb-2 italic">Hyper-Local Infrastructure Alerts</h3>
-          <p className="text-sm text-slate-500 font-medium leading-relaxed mb-6">
+          <p className="text-sm text-slate-400 font-medium leading-relaxed mb-6">
             Get instant notifications on 5G node upgrades, local rental market shifts, and logistics expansions in <span className="text-white">{region}</span>.
           </p>
 
@@ -146,7 +146,7 @@ export const AffiliateWidgets: React.FC<AffiliateWidgetsProps> = React.memo(({ c
                 </div>
               ))}
             </div>
-            <span className="text-sm text-slate-500 font-bold uppercase tracking-widest">
+            <span className="text-sm text-slate-400 font-bold uppercase tracking-widest">
               +1.2k Subscribed in this sector
             </span>
           </div>

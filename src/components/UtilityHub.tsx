@@ -83,7 +83,7 @@ export const UtilityHub: React.FC = React.memo(() => {
             <h3 className="text-xl md:text-2xl font-bold text-white mb-2 uppercase">QR Generator</h3>
             <div className="grid md:grid-cols-2 gap-6 items-center">
             <div className="space-y-3">
-              <label className="text-sm font-mono uppercase tracking-widest text-slate-500">Target URL or Text</label>
+              <label className="text-sm font-mono uppercase tracking-widest text-slate-400">Target URL or Text</label>
               <input
                 type="text"
                 value={qrText}
@@ -113,7 +113,7 @@ export const UtilityHub: React.FC = React.memo(() => {
             <h3 className="text-xl md:text-2xl font-bold text-white mb-2 uppercase">JSON Formatter</h3>
             <div className="grid md:grid-cols-2 gap-4">
               <div>
-                <label className="text-sm font-mono uppercase tracking-widest text-slate-500 block mb-2">Raw JSON Input</label>
+                <label className="text-sm font-mono uppercase tracking-widest text-slate-400 block mb-2">Raw JSON Input</label>
                 <textarea
                   value={jsonText}
                   onChange={(e) => setJsonText(e.target.value)}
@@ -121,7 +121,7 @@ export const UtilityHub: React.FC = React.memo(() => {
                 />
               </div>
               <div>
-                <label className="text-sm font-mono uppercase tracking-widest text-slate-500 block mb-2">Formatted Output</label>
+                <label className="text-sm font-mono uppercase tracking-widest text-slate-400 block mb-2">Formatted Output</label>
                 <pre className="w-full h-40 p-3 bg-slate-900 border border-slate-800 rounded-lg text-emerald-400 font-mono text-sm overflow-y-auto whitespace-pre-wrap">
                   {formattedJson || '// Click format button to trigger clean syntax verification.'}
                 </pre>
@@ -139,7 +139,7 @@ export const UtilityHub: React.FC = React.memo(() => {
         {activeTab === 'csv' && (
           <div className="space-y-3 animate-fade-in">
             <h3 className="text-xl md:text-2xl font-bold text-white mb-2 uppercase">CSV Grid Preview</h3>
-            <label className="text-sm font-mono uppercase tracking-widest text-slate-500 block">Comma Separated Values (CSV Input)</label>
+            <label className="text-sm font-mono uppercase tracking-widest text-slate-400 block">Comma Separated Values (CSV Input)</label>
             <textarea
               value={csvText}
               onChange={(e) => setCsvText(e.target.value)}
@@ -169,15 +169,15 @@ export const UtilityHub: React.FC = React.memo(() => {
             </div>
             <div className="grid sm:grid-cols-3 gap-4 text-center">
               <div className="p-3 bg-slate-950 border border-slate-800/80 rounded-xl">
-                <span className="text-sm uppercase font-mono tracking-widest text-slate-500 block">Manual Process Cost</span>
+                <span className="text-sm uppercase font-mono tracking-widest text-slate-400 block">Manual Process Cost</span>
                 <span className="text-xl font-bold text-rose-400 font-mono">${(roiAmount * 1.4).toFixed(0)}</span>
               </div>
               <div className="p-3 bg-slate-950 border border-slate-800/80 rounded-xl ring-1 ring-emerald-500/30">
-                <span className="text-sm uppercase font-mono tracking-widest text-slate-500 block">ZipIntel Automated Cost</span>
+                <span className="text-sm uppercase font-mono tracking-widest text-slate-400 block">ZipIntel Automated Cost</span>
                 <span className="text-xl font-bold text-emerald-400 font-mono">${(roiAmount * 0.15).toFixed(0)}</span>
               </div>
               <div className="p-3 bg-slate-950 border border-slate-800/80 rounded-xl bg-blue-950/20">
-                <span className="text-sm uppercase font-mono tracking-widest text-slate-500 block">Net Monthly Savings Moat</span>
+                <span className="text-sm uppercase font-mono tracking-widest text-slate-400 block">Net Monthly Savings Moat</span>
                 <span className="text-xl font-bold text-blue-400 font-mono">${(roiAmount * 1.25).toFixed(0)}</span>
               </div>
             </div>

@@ -15,7 +15,7 @@ export const TrustFooter: React.FC = React.memo(() => {
               Zip<span className="text-blue-500 font-medium">Intel</span> AI
             </span>
           </div>
-          <p className="text-sm text-slate-500 leading-relaxed max-w-sm">
+          <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
             Oka scalable digital ecosystem for context-aware global financial routing matrix computations. Providing deterministic verification patterns for 17 target countries with zero latency.
           </p>
         </div>
@@ -51,10 +51,10 @@ export const TrustFooter: React.FC = React.memo(() => {
 
       {/* Regulatory Disclosure Section */}
       <div className="max-w-6xl mx-auto mb-8 p-4 bg-slate-900/30 border border-slate-800/50 rounded-xl">
-        <h4 className="text-sm font-mono uppercase tracking-[0.2em] text-slate-500 font-bold mb-3 border-b border-slate-800 pb-2">
+        <h4 className="text-sm font-mono uppercase tracking-[0.2em] text-slate-400 font-bold mb-3 border-b border-slate-800 pb-2">
           Global Regulatory & Financial Disclosure
         </h4>
-        <div className="grid md:grid-cols-2 gap-6 text-xs font-mono leading-relaxed text-slate-500 italic">
+        <div className="grid md:grid-cols-2 gap-6 text-xs font-mono leading-relaxed text-slate-400 italic">
           <p>
             <strong className="text-slate-400 uppercase">Financial Accuracy:</strong> ZipIntel AI is a data analysis platform. Routing codes (IFSC, ABA, SWIFT, IBAN) are generated via deterministic interpolation. While we maintain a 99.9% verification baseline, users MUST verify all mission-critical data with their primary financial institution before executing transactions. We are not a bank or registered financial advisor.
           </p>
@@ -67,7 +67,7 @@ export const TrustFooter: React.FC = React.memo(() => {
       {/* Bottom Footer Fine Print */}
       <div className="max-w-6xl mx-auto pt-6 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-mono text-slate-600 text-center md:text-left">
         <p>© {currentYear} ZipIntel AI Digital Infrastructure. All rights reserved.</p>
-        <p className="text-slate-500">
+        <p className="text-slate-400">
           Founder Status:{" "}
           <a 
             href="https://www.linkedin.com/in/munchingi-matya-raju-52baa71bb/"

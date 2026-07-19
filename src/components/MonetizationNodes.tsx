@@ -43,7 +43,7 @@ export const MonetizationNodes: React.FC<{ zone?: 'sidebar' | 'bottom' }> = Reac
         <div className="hidden lg:block px-4 py-1.5 bg-slate-950 border border-slate-800 rounded text-sm font-mono text-slate-600 tracking-wider">
           ADVERTISEMENT SLOTACTIVE
         </div>
-        <a 
+        <a aria-label="Visit Hostinger (Advertisement)"
           href="https://www.hostinger.com" 
           target="_blank" 
           rel="noopener noreferrer" 

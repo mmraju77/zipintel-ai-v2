@@ -122,9 +122,9 @@ export const GlobalSearch: React.FC = React.memo(() => {
             {isSearching ? (
               <Loader2 className="w-5 h-5 text-[#deff9a] animate-spin absolute left-3 sm:static" />
             ) : (
-              <Search className="w-5 h-5 text-slate-500 group-focus-within:text-[#deff9a] transition-colors absolute left-3 sm:static" />
+              <Search className="w-5 h-5 text-slate-400 group-focus-within:text-[#deff9a] transition-colors absolute left-3 sm:static" />
             )}
-            <input
+            <input aria-label="Search" 
               type="text"
               value={query}
               onChange={(e) => handleSearch(e.target.value)}
@@ -138,7 +138,7 @@ export const GlobalSearch: React.FC = React.memo(() => {
               className="bg-transparent border-none focus:ring-0 w-full text-white font-medium pl-10 sm:pl-4 pr-4 py-3 sm:py-3 placeholder:text-slate-600 text-base"
             />
           </div>
-          <button 
+          <button aria-label="Action"  
             onClick={() => results.length > 0 && handleSelect(results[0])}
             className="w-full sm:w-auto bg-[#deff9a] hover:bg-[#c9f57d] text-midnight px-6 py-3 rounded-xl font-black text-sm uppercase tracking-widest transition-all flex items-center justify-center gap-2 active:scale-95 flex-shrink-0"
           >
@@ -159,18 +159,18 @@ export const GlobalSearch: React.FC = React.memo(() => {
               <p className="text-xs font-black text-[#deff9a] uppercase tracking-[0.2em] px-3 py-1">Intelligence Suggestions</p>
             </div>
             {results.map((result, idx) => (
-              <button
+              <button aria-label="Action" 
                 key={`${result.id}-${idx}`}
                 onClick={() => handleSelect(result)}
                 className="w-full flex items-center justify-between p-4 hover:bg-[#deff9a]/5 border-b border-white/5 last:border-0 group transition-all text-left"
               >
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center border border-white/5 text-slate-500 group-hover:text-[#deff9a] group-hover:border-[#deff9a]/30 transition-all">
+                  <div className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center border border-white/5 text-slate-400 group-hover:text-[#deff9a] group-hover:border-[#deff9a]/30 transition-all">
                     {result.isLive ? <Zap className="w-5 h-5 text-[#deff9a]" /> : (result.postalCode ? <Hash className="w-5 h-5" /> : <MapPin className="w-5 h-5" />)}
                   </div>
                   <div>
                     <p className="text-base font-bold text-white group-hover:text-[#deff9a] transition-colors">{result.name}</p>
-                    <p className="text-sm text-slate-500 font-bold uppercase tracking-widest leading-none mt-1">
+                    <p className="text-sm text-slate-400 font-bold uppercase tracking-widest leading-none mt-1">
                       {result.type} • {result.countryName} {result.postalCode && `• ${result.postalCode}`}
                     </p>
                   </div>

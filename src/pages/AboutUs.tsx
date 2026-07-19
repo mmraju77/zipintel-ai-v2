@@ -1,10 +1,14 @@
+import { SEO } from '../components/SEO';
 import React from 'react';
 import { motion } from 'motion/react';
 import { Shield, Cpu, Globe, Award, Linkedin, Mail } from 'lucide-react';
 
 export default function AboutUs() {
   return (
-    <div className="min-h-screen bg-[#0B0F19] text-slate-300 py-12 px-6 font-sans">
+    
+    <>
+      <SEO title="About Us - ZipIntel AI" description="Learn more about the ZipIntel AI project and our mission." />
+      <div className="min-h-screen bg-[#0B0F19] text-slate-300 py-12 px-6 font-sans">
       <div className="max-w-4xl mx-auto">
         {/* Header Section */}
         <motion.div 
@@ -53,17 +57,17 @@ export default function AboutUs() {
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="p-3 bg-slate-950/50 border border-slate-800/80 rounded-xl">
-                  <p className="text-sm text-slate-500 uppercase font-bold mb-1">Specialization</p>
+                  <p className="text-sm text-slate-400 uppercase font-bold mb-1">Specialization</p>
                   <p className="text-sm text-white font-mono">Neural Routing Matrix</p>
                 </div>
                 <div className="p-3 bg-slate-950/50 border border-slate-800/80 rounded-xl">
-                  <p className="text-sm text-slate-500 uppercase font-bold mb-1">Project Scale</p>
+                  <p className="text-sm text-slate-400 uppercase font-bold mb-1">Project Scale</p>
                   <p className="text-sm text-white font-mono">17+ Jurisdictions</p>
                 </div>
               </div>
 
               <div className="flex gap-4 pt-4">
-                <a 
+                <a aria-label="LinkedIn Profile"
                   href="https://www.linkedin.com/in/munchingi-matya-raju-52baa71bb/"
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -71,7 +75,7 @@ export default function AboutUs() {
                 >
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a 
+                <a aria-label="Email Address"
                   href="mailto:MooVi7g@gmail.com"
                   className="flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white text-sm font-mono uppercase font-bold rounded-lg border border-slate-700 transition-colors"
                 >
@@ -110,11 +114,12 @@ export default function AboutUs() {
             >
               <v.icon className="w-8 h-8 text-blue-500 mb-4" />
               <h4 className="text-white font-bold mb-2 uppercase tracking-tight text-base">{v.title}</h4>
-              <p className="text-sm text-slate-500 leading-relaxed">{v.desc}</p>
+              <p className="text-sm text-slate-400 leading-relaxed">{v.desc}</p>
             </motion.div>
           ))}
         </div>
       </div>
     </div>
+    </>
   );
 }

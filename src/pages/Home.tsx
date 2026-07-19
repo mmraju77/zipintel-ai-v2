@@ -1,5 +1,5 @@
+import { SEO } from '../components/SEO';
 import React, { useState, useEffect, useCallback } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'motion/react';
 import { Cpu, ArrowRight, Zap, Database, MapPin, ChevronRight, Hash, Heart, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -86,11 +86,12 @@ export default function Home() {
   };
 
   return (
+    
     <div className="space-y-16 py-8">
-      <Helmet>
-        <title>ZipIntel AI | {t('heroTitle')} & Utility Intelligence Platform</title>
-        <meta name="description" content={t('heroSubtitle')} />
-      </Helmet>
+            <SEO 
+        title={`ZipIntel AI | ${t('heroTitle')} & Utility Intelligence Platform`}
+        description={t('heroSubtitle')}
+      />
 
       {/* Hero Section */}
       <section className="text-center space-y-6 max-w-4xl mx-auto">
@@ -148,23 +149,23 @@ export default function Home() {
                       <Hash className="w-5 h-5 text-gold group-hover:scale-110 transition-transform" />
                       <div className="flex flex-col items-end">
                         <div className="flex gap-2 mb-2">
-                          <button 
+                          <button aria-label="Action"  
                             onClick={(e) => {
                               e.preventDefault();
                               e.stopPropagation();
                               toggleFavorite(item);
                             }}
-                            className="p-3 sm:p-1.5 rounded-lg touch-target bg-slate-900 border border-slate-800 text-slate-500 hover:text-red-500 transition-colors"
+                            className="p-3 sm:p-1.5 rounded-lg touch-target bg-slate-900 border border-slate-800 text-slate-400 hover:text-red-500 transition-colors"
                           >
                             <Heart className={`w-3.5 h-3.5 ${favorites.some(f => f.id === item.id) ? 'fill-red-500 text-red-500' : ''}`} />
                           </button>
-                          <button 
+                          <button aria-label="Action"  
                             onClick={(e) => {
                               e.preventDefault();
                               e.stopPropagation();
                               handleDownloadReport(item);
                             }}
-                            className="p-3 sm:p-1.5 rounded-lg touch-target bg-slate-900 border border-slate-800 text-slate-500 hover:text-gold transition-colors"
+                            className="p-3 sm:p-1.5 rounded-lg touch-target bg-slate-900 border border-slate-800 text-slate-400 hover:text-gold transition-colors"
                           >
                             <Download className="w-3.5 h-3.5" />
                           </button>
@@ -175,7 +176,7 @@ export default function Home() {
                     </div>
 
                     <h3 className="text-xl font-black text-white group-hover:text-gold transition-colors uppercase italic mb-1">{item.name}</h3>
-                    <p className="text-sm text-slate-500 font-bold uppercase tracking-tighter mb-4">
+                    <p className="text-sm text-slate-400 font-bold uppercase tracking-tighter mb-4">
                       {item.type}
                     </p>
 
@@ -199,7 +200,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="text-xl text-slate-500 font-medium max-w-2xl mx-auto"
+          className="text-xl text-slate-400 font-medium max-w-2xl mx-auto"
         >
           {t('heroSubtitle')}
         </motion.p>
@@ -227,12 +228,12 @@ export default function Home() {
                 transition={{ delay: idx * 0.05 }}
                 className="glass-card p-4 group flex items-center gap-4 hardware-accelerated border-slate-800 hover:border-gold/30 transition-all"
               >
-                <MapPin className="w-4 h-4 text-slate-500 group-hover:text-gold transition-colors flex-shrink-0" />
+                <MapPin className="w-4 h-4 text-slate-400 group-hover:text-gold transition-colors flex-shrink-0" />
                 <div className="flex-1 min-w-0">
                   <p className="text-lg font-bold text-white group-hover:text-gold transition-colors truncate">{item.name}</p>
                   <p className="text-sm text-slate-600 font-bold uppercase tracking-widest truncate">{item.postalCode || 'REGIONAL'}</p>
                 </div>
-                <button 
+                <button aria-label="Action"  
                   onClick={(e) => {
                     e.preventDefault();
                     e.stopPropagation();
@@ -252,7 +253,7 @@ export default function Home() {
       <section className="space-y-6">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between px-2 gap-4">
           <div>
-            <h3 className="text-sm font-black text-slate-500 uppercase tracking-widest">{t('globalDirectories')}</h3>
+            <h3 className="text-sm font-black text-slate-400 uppercase tracking-widest">{t('globalDirectories')}</h3>
             <p className="text-xl font-bold text-white uppercase italic">{t('selectRegion')}</p>
           </div>
           <Link to="/directories" className="text-gold text-base font-bold uppercase tracking-widest hover:underline flex items-center gap-2 touch-target p-2">
@@ -273,7 +274,7 @@ export default function Home() {
               <MapPin className="w-5 h-5 text-gold group-hover:scale-110 transition-transform mt-1 flex-shrink-0" />
               <div className="flex-1 min-w-0">
                 <h3 className="text-xl font-black text-white group-hover:text-gold transition-colors uppercase italic truncate">{country.name}</h3>
-                <p className="text-sm text-slate-500 font-bold uppercase tracking-tighter leading-tight truncate mt-0.5">
+                <p className="text-sm text-slate-400 font-bold uppercase tracking-tighter leading-tight truncate mt-0.5">
                   {country.description}
                 </p>
               </div>
@@ -314,7 +315,7 @@ export default function Home() {
           {/* PSEO Status */}
           <div className="md:col-span-2 glass-card p-8 flex flex-col justify-between">
             <div className="flex justify-between items-center mb-6">
-              <span className="text-sm text-slate-500 uppercase font-black tracking-widest">{t('recentRewrites')}</span>
+              <span className="text-sm text-slate-400 uppercase font-black tracking-widest">{t('recentRewrites')}</span>
               <div className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                 <span className="text-sm text-emerald-500 font-bold uppercase">{t('liveStatus')}</span>
@@ -336,7 +337,7 @@ export default function Home() {
 
           {/* Network Stats */}
           <div className="glass-card p-8 flex flex-col items-center justify-center text-center">
-            <p className="text-sm text-slate-500 mb-2 uppercase font-black tracking-widest">{t('networkLatency')}</p>
+            <p className="text-sm text-slate-400 mb-2 uppercase font-black tracking-widest">{t('networkLatency')}</p>
             <p className="text-5xl font-light text-white italic">14<span className="text-gold text-xl ml-1 font-bold">ms</span></p>
             <div className="w-full h-1 bg-slate-800 rounded-full mt-6 overflow-hidden">
               <motion.div 
@@ -351,7 +352,7 @@ export default function Home() {
           <div className="glass-card p-8 flex flex-col justify-between group cursor-pointer overflow-hidden relative">
             <Database className="w-8 h-8 text-slate-700 mb-6 group-hover:text-gold transition-colors" />
             <h4 className="text-xl font-bold text-white mb-2">{t('publicApi')}</h4>
-            <p className="text-xl text-slate-500 font-medium">{t('rawDatabaseAccess')}</p>
+            <p className="text-xl text-slate-400 font-medium">{t('rawDatabaseAccess')}</p>
             <div className="absolute top-2 right-2 text-xs bg-slate-900 border border-slate-800 px-1.5 py-0.5 rounded text-slate-600 uppercase font-bold">Beta</div>
           </div>
       </section>

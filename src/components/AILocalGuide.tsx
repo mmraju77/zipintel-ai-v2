@@ -80,7 +80,7 @@ export const AILocalGuide: React.FC<AILocalGuideProps> = ({ districtId }) => {
                   ZIPINTEL CORE v3.0
                 </span>
               </h2>
-              <p className="text-sm text-slate-500 font-bold uppercase tracking-widest mt-1">
+              <p className="text-sm text-slate-400 font-bold uppercase tracking-widest mt-1">
                 Localized Narrative Synthesis • Sector: {districtId.toUpperCase()}
               </p>
             </div>

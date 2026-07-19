@@ -39,10 +39,15 @@ export default function CountryPage() {
       <Helmet>
         <title>{seo.title}</title>
         <meta name="description" content={seo.description} />
+        <link rel="canonical" href={`https://www.zipintel-ai.com/${currentCountry}/${zipCode || ''}`} />
+        <meta property="og:title" content={seo.title} />
+        <meta property="og:description" content={seo.description} />
+        <meta name="twitter:title" content={seo.title} />
+        <meta name="twitter:description" content={seo.description} />
       </Helmet>
 
       {/* Breadcrumb Navigation - Search Crawlers కి చాలా ముఖ్యం */}
-      <div className="max-w-5xl mx-auto mb-6 text-sm font-mono flex items-center gap-2 text-slate-500">
+      <div className="max-w-5xl mx-auto mb-6 text-sm font-mono flex items-center gap-2 text-slate-400">
         <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
         <span>/</span>
         <span className="uppercase text-slate-400">{currentCountry}</span>
@@ -62,7 +67,7 @@ export default function CountryPage() {
             </h1>
           </div>
           <div className="text-right">
-            <span className="text-sm font-mono text-slate-500 block">REGIONAL DIRECTORY</span>
+            <span className="text-sm font-mono text-slate-400 block">REGIONAL DIRECTORY</span>
             <span className="text-base font-semibold text-white uppercase tracking-wider">{currentCountry} / Global Matrix</span>
           </div>
         </div>
@@ -82,8 +87,8 @@ export default function CountryPage() {
               📋 Regional SEO Metadata Context
             </h3>
             <div className="space-y-3 text-base">
-              <p><span className="text-slate-500 font-mono">Dynamic Page Title:</span> <span className="text-white font-medium">{seo.title}</span></p>
-              <p><span className="text-slate-500 font-mono">Index Optimization:</span> <span className="text-emerald-400 font-mono">Ready for Googlebot Indexing / Canonical Active</span></p>
+              <p><span className="text-slate-400 font-mono">Dynamic Page Title:</span> <span className="text-white font-medium">{seo.title}</span></p>
+              <p><span className="text-slate-400 font-mono">Index Optimization:</span> <span className="text-emerald-400 font-mono">Ready for Googlebot Indexing / Canonical Active</span></p>
             </div>
           </div>
 
@@ -91,7 +96,7 @@ export default function CountryPage() {
             <h3 className="text-md font-mono uppercase tracking-wider text-slate-400 mb-2">
               💡 User Quick Actions
             </h3>
-            <p className="text-sm text-slate-500 mb-4">Use our free Phase 2 utilities below to export or format this node data structure.</p>
+            <p className="text-sm text-slate-400 mb-4">Use our free Phase 2 utilities below to export or format this node data structure.</p>
             <div className="flex flex-wrap gap-3">
               <button onClick={() => window.print()} className="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-white font-mono text-sm rounded border border-slate-700 transition-colors">
                 [Print/Save PDF]
