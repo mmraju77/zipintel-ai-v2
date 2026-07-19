@@ -80,7 +80,7 @@ export const AILocalGuide: React.FC<AILocalGuideProps> = ({ districtId }) => {
                   ZIPINTEL CORE v3.0
                 </span>
               </h2>
-              <p className="text-sm text-slate-400 font-bold uppercase tracking-widest mt-1">
+              <p className="text-sm text-slate-100 font-bold uppercase tracking-widest mt-1">
                 Localized Narrative Synthesis • Sector: {districtId.toUpperCase()}
               </p>
             </div>
@@ -99,7 +99,7 @@ export const AILocalGuide: React.FC<AILocalGuideProps> = ({ districtId }) => {
               <Zap className="w-4 h-4" />
               <h3 className="text-sm font-bold uppercase tracking-[0.2em] italic">Logistics AI</h3>
             </div>
-            <p className="text-[13px] text-slate-400 leading-relaxed font-medium">
+            <p className="text-[13px] text-slate-100 leading-relaxed font-medium">
               {ai.logistics}
             </p>
           </div>
@@ -109,7 +109,7 @@ export const AILocalGuide: React.FC<AILocalGuideProps> = ({ districtId }) => {
               <Globe className="w-4 h-4" />
               <h3 className="text-sm font-bold uppercase tracking-[0.2em] italic">Connectivity</h3>
             </div>
-            <p className="text-[13px] text-slate-400 leading-relaxed font-medium">
+            <p className="text-[13px] text-slate-100 leading-relaxed font-medium">
               {ai.connectivity}
             </p>
           </div>
@@ -119,14 +119,14 @@ export const AILocalGuide: React.FC<AILocalGuideProps> = ({ districtId }) => {
               <Home className="w-4 h-4" />
               <h3 className="text-sm font-bold uppercase tracking-[0.2em] italic">Economic Index</h3>
             </div>
-            <p className="text-[13px] text-slate-400 leading-relaxed font-medium">
+            <p className="text-[13px] text-slate-100 leading-relaxed font-medium">
               {ai.economic}
             </p>
           </div>
         </div>
 
         {/* Footer Disclaimer */}
-        <div className="mt-10 pt-6 border-t border-slate-900 flex justify-between items-center text-sm font-bold text-slate-600 uppercase tracking-widest">
+        <div className="mt-10 pt-6 border-t border-slate-900 flex justify-between items-center text-sm font-bold text-slate-200 uppercase tracking-widest">
           <span>Source: ZipIntel AI Intelligence Node (Dynamic Local Synthesis)</span>
           <span className="flex items-center gap-1.5 grayscale opacity-50">
             <Shield className="w-3 h-3" />

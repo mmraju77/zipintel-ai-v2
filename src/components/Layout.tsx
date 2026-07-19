@@ -94,32 +94,32 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
 
           <nav className="flex-1 px-4 py-2 space-y-1 overflow-y-auto">
-            <div className="text-sm uppercase tracking-widest text-slate-400 mb-2 px-2 font-bold">{t('navigation')}</div>
+            <div className="text-sm uppercase tracking-widest text-slate-100 mb-2 px-2 font-bold">{t('navigation')}</div>
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
                 className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all ${
-                  location.pathname === item.path ? 'sidebar-link-active' : 'text-slate-400 hover:bg-slate-800/50 hover:text-slate-100'
+                  location.pathname === item.path ? 'sidebar-link-active' : 'text-slate-100 hover:bg-slate-800/50 hover:text-slate-100'
                 }`}
               >
-                <item.icon className={`w-5 h-5 flex-shrink-0 ${location.pathname === item.path ? 'text-gold' : 'text-slate-400'}`} />
+                <item.icon className={`w-5 h-5 flex-shrink-0 ${location.pathname === item.path ? 'text-gold' : 'text-slate-100'}`} />
                 {isSidebarOpen && <span className="text-base font-semibold">{item.name}</span>}
               </Link>
             ))}
 
             <div className="pt-8 mb-2">
-              <div className="text-sm uppercase tracking-widest text-slate-400 mb-2 px-2 font-bold">{t('directories')}</div>
+              <div className="text-sm uppercase tracking-widest text-slate-100 mb-2 px-2 font-bold">{t('directories')}</div>
               <div className="space-y-1">
                 {COUNTRIES.map((country) => (
                   <Link
                     key={country.id}
                     to={country.path}
                     className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all ${
-                      location.pathname.startsWith(country.path) ? 'sidebar-link-active' : 'text-slate-400 hover:bg-slate-800/50 hover:text-slate-100'
+                      location.pathname.startsWith(country.path) ? 'sidebar-link-active' : 'text-slate-100 hover:bg-slate-800/50 hover:text-slate-100'
                     }`}
                   >
-                    <MapPin className={`w-5 h-5 flex-shrink-0 ${location.pathname.startsWith(country.path) ? 'text-gold' : 'text-slate-400'}`} />
+                    <MapPin className={`w-5 h-5 flex-shrink-0 ${location.pathname.startsWith(country.path) ? 'text-gold' : 'text-slate-100'}`} />
                     {isSidebarOpen && <span className="text-xl font-semibold">{country.name}</span>}
                   </Link>
                 ))}
@@ -130,12 +130,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="mt-auto p-4 flex flex-col gap-4">
             <button aria-label="Action"  
               onClick={toggleSidebar}
-              className="p-2 text-slate-400 hover:text-gold transition-colors flex items-center justify-center bg-slate-800/30 rounded-lg hover:bg-slate-800/60"
+              className="p-2 text-slate-100 hover:text-gold transition-colors flex items-center justify-center bg-slate-800/30 rounded-lg hover:bg-slate-800/60"
             >
               <ChevronRight className={`w-5 h-5 transition-transform ${isSidebarOpen ? 'rotate-180' : ''}`} />
             </button>
             {isSidebarOpen && (
-              <div className="text-sm text-slate-400 font-mono text-center border-t border-slate-800 pt-4">
+              <div className="text-sm text-slate-100 font-mono text-center border-t border-slate-800 pt-4">
                 v2.4.1 Regional Build
               </div>
             )}
@@ -161,20 +161,20 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               >
                 <div className="flex items-center justify-between mb-10">
                   <Logo />
-                  <button aria-label="Close Mobile Menu" onClick={toggleMobileMenu} className="text-slate-400 p-2 touch-target hover:bg-slate-800 rounded-lg">
+                  <button aria-label="Close Mobile Menu" onClick={toggleMobileMenu} className="text-slate-100 p-2 touch-target hover:bg-slate-800 rounded-lg">
                     <X />
                   </button>
                 </div>
                 <div className="space-y-8">
                   <div className="space-y-1">
-                    <div className="text-sm uppercase tracking-widest text-slate-400 mb-3 px-2 font-bold">{t('navigation')}</div>
+                    <div className="text-sm uppercase tracking-widest text-slate-100 mb-3 px-2 font-bold">{t('navigation')}</div>
                     {navItems.map((item) => (
                       <Link
                         key={item.path}
                         to={item.path}
                         onClick={toggleMobileMenu}
                         className={`flex items-center gap-4 px-4 py-3 rounded-xl transition-all ${
-                          location.pathname === item.path ? 'sidebar-link-active' : 'text-slate-400 hover:bg-slate-800/50'
+                          location.pathname === item.path ? 'sidebar-link-active' : 'text-slate-100 hover:bg-slate-800/50'
                         }`}
                       >
                         <item.icon className="w-5 h-5" />
@@ -184,7 +184,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   </div>
 
                   <div>
-                    <div className="text-sm uppercase tracking-widest text-slate-400 mb-3 px-2 font-bold">{t('directories')}</div>
+                    <div className="text-sm uppercase tracking-widest text-slate-100 mb-3 px-2 font-bold">{t('directories')}</div>
                     <div className="grid grid-cols-1 gap-1">
                       {COUNTRIES.map((country) => (
                         <Link
@@ -192,7 +192,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                           to={country.path}
                           onClick={toggleMobileMenu}
                           className={`flex items-center gap-4 px-4 py-3 rounded-xl transition-all ${
-                            location.pathname.startsWith(country.path) ? 'sidebar-link-active' : 'text-slate-400 hover:bg-slate-800/50'
+                            location.pathname.startsWith(country.path) ? 'sidebar-link-active' : 'text-slate-100 hover:bg-slate-800/50'
                           }`}
                         >
                           <MapPin className="w-5 h-5" />
@@ -212,14 +212,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           {/* Top Search Bar (Desktop) */}
           <div className="hidden md:flex items-center justify-between p-6 sticky top-0 z-30 bg-[#020617]/80 backdrop-blur-xl border-b border-slate-800/50">
             <div className="max-w-2xl w-full relative">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5" />
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-100 w-5 h-5" />
               <input 
                 type="text" 
                 value={topSearch}
                 onChange={(e) => setTopSearch(e.target.value)}
                 onKeyDown={handleTopSearch}
                 placeholder={t('searchPlaceholder')} 
-                className="w-full bg-slate-900/50 border border-slate-800 rounded-xl py-3 pl-12 pr-4 text-base focus:outline-none focus:border-gold transition-all text-white placeholder-slate-500 shadow-inner"
+                className="w-full bg-slate-900/50 border border-slate-800 rounded-xl py-3 pl-12 pr-4 text-base focus:outline-none focus:border-gold transition-all text-white placeholder-slate-300 shadow-inner"
               />
             </div>
             <div className="flex items-center gap-6">
@@ -228,17 +228,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 onClick={() => setLanguage(language === 'en' ? 'te' : 'en')}
                 className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-800 bg-slate-900/50 hover:border-gold/50 transition-all group"
               >
-                <Languages className="w-4 h-4 text-slate-400 group-hover:text-gold" />
+                <Languages className="w-4 h-4 text-slate-100 group-hover:text-gold" />
                 <span className="text-sm font-black uppercase tracking-widest text-slate-100 italic">
                   {language === 'en' ? 'తెలుగు' : 'English'}
                 </span>
               </button>
 
               <div className="text-right">
-                <p className="text-sm text-slate-400 uppercase font-black tracking-tighter">System Status</p>
+                <p className="text-sm text-slate-100 uppercase font-black tracking-tighter">System Status</p>
                 <div className="flex items-center gap-1.5 justify-end">
                   <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_#10b981]" />
-                  <p className="text-sm font-black text-emerald-500 uppercase">Optimized</p>
+                  <p className="text-sm font-black text-emerald-300 uppercase">Optimized</p>
                 </div>
               </div>
               <div className="w-10 h-10 rounded-full border-2 border-gold flex items-center justify-center bg-slate-800 shadow-[0_0_15px_rgba(212,175,55,0.2)]">
@@ -248,7 +248,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
 
           <main id="main-content" className="flex-1 w-full">
-            <div className="max-w-7xl mx-auto p-4 md:p-8">
+            <div className="w-full max-w-[1920px] mx-auto px-4 md:px-8 py-4 md:py-8">
               {children}
             </div>
 

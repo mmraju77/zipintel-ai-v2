@@ -49,13 +49,13 @@ export const GeoRadar: React.FC<GeoRadarProps> = ({ district, coords, language }
 
       <div className="absolute bottom-6 left-6 right-6">
         <div className="p-4 rounded-2xl bg-slate-950/90 border border-slate-800 backdrop-blur-xl space-y-1">
-          <p className="text-sm font-black text-slate-400 uppercase tracking-widest">{language === 'te' ? 'ప్రాంతీయ ఫోకస్' : 'REGIONAL FOCUS'}</p>
+          <p className="text-sm font-black text-slate-100 uppercase tracking-widest">{language === 'te' ? 'ప్రాంతీయ ఫోకస్' : 'REGIONAL FOCUS'}</p>
           <p className="text-sm font-black text-white italic uppercase tracking-tighter">
             {districtTitle}
           </p>
           <div className="flex gap-2 pt-2">
             <span className="text-sm font-bold text-gold px-2 py-0.5 bg-gold/10 rounded border border-gold/20">GIS INDEXED</span>
-            <span className="text-sm font-bold text-slate-400 px-2 py-0.5 bg-slate-900 rounded border border-slate-800 uppercase italic">Coordinates: {coords.lat}° N, {coords.lng}° E</span>
+            <span className="text-sm font-bold text-slate-100 px-2 py-0.5 bg-slate-900 rounded border border-slate-800 uppercase italic">Coordinates: {coords.lat}° N, {coords.lng}° E</span>
           </div>
         </div>
       </div>

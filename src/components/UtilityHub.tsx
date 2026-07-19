@@ -37,7 +37,7 @@ export const UtilityHub: React.FC = React.memo(() => {
           </thead>
           <tbody>
             {dataRows.map((row, rowIndex) => (
-              <tr key={rowIndex} className="border-b border-slate-800 text-slate-400 hover:bg-slate-900/50">
+              <tr key={rowIndex} className="border-b border-slate-800 text-slate-100 hover:bg-slate-900/50">
                 {row.split(',').map((cell, cellIndex) => <td key={cellIndex} className="p-2.5 font-mono">{cell}</td>)}
               </tr>
             ))}
@@ -51,9 +51,9 @@ export const UtilityHub: React.FC = React.memo(() => {
     <div className="mt-12 p-6 bg-slate-900/60 border border-slate-800 rounded-2xl max-w-6xl mx-auto shadow-zipGlow">
       <div className="mb-6">
         <h2 className="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
-          <span className="text-blue-500">⚡</span> Core AI & Utility Tools Hub
+          <span className="text-blue-300">⚡</span> Core AI & Utility Tools Hub
         </h2>
-        <p className="text-slate-400 text-base mt-1">Free instant developer utilities and automated local clearing simulators.</p>
+        <p className="text-slate-100 text-base mt-1">Free instant developer utilities and automated local clearing simulators.</p>
       </div>
 
       {/* Tabs Navigation */}
@@ -64,8 +64,8 @@ export const UtilityHub: React.FC = React.memo(() => {
             onClick={() => setActiveTab(tab)}
             className={`px-4 py-2 rounded-lg font-mono text-sm uppercase tracking-wider font-semibold border transition-all ${
               activeTab === tab
-                ? 'bg-blue-600/15 border-blue-500 text-blue-400 shadow-[0_0_15px_rgba(37,99,235,0.1)]'
-                : 'bg-slate-950 border-slate-800 text-slate-400 hover:text-white hover:border-slate-700'
+                ? 'bg-blue-600/15 border-blue-500 text-blue-300 shadow-[0_0_15px_rgba(37,99,235,0.1)]'
+                : 'bg-slate-950 border-slate-800 text-slate-100 hover:text-white hover:border-slate-700'
             }`}
           >
             {tab === 'qr' && 'QR Generator'}
@@ -77,13 +77,13 @@ export const UtilityHub: React.FC = React.memo(() => {
       </div>
 
       {/* Dynamic Tab Content */}
-      <div className="bg-slate-950/40 p-4 rounded-xl border border-slate-800/80 min-h-[250px]">
+      <div className="bg-slate-950/40 p-6 md:p-8 rounded-xl border border-slate-800/80 min-h-[300px]">
         {activeTab === 'qr' && (
           <div className="space-y-4 animate-fade-in">
             <h3 className="text-xl md:text-2xl font-bold text-white mb-2 uppercase">QR Generator</h3>
             <div className="grid md:grid-cols-2 gap-6 items-center">
             <div className="space-y-3">
-              <label className="text-sm font-mono uppercase tracking-widest text-slate-400">Target URL or Text</label>
+              <label className="text-sm font-mono uppercase tracking-widest text-slate-100">Target URL or Text</label>
               <input
                 type="text"
                 value={qrText}
@@ -91,7 +91,7 @@ export const UtilityHub: React.FC = React.memo(() => {
                 className="w-full p-3 bg-slate-950 border border-slate-800 rounded-lg text-white font-mono text-base focus:outline-none focus:border-blue-500"
               />
             </div>
-            <div className="flex flex-col items-center justify-center p-4 bg-slate-950 border border-slate-800 rounded-xl max-w-[220px] mx-auto">
+            <div className="flex flex-col items-center justify-center p-6 bg-slate-950 border border-slate-800 rounded-xl max-w-[260px] mx-auto min-h-[200px]">
               {/* Clean Geometric Mock QR Generator Structure */}
               <div className="w-32 h-32 bg-white p-2 rounded flex flex-wrap gap-1 items-center justify-center relative shadow-md">
                 <div className="absolute inset-2 border-4 border-slate-900 flex flex-wrap p-1 gap-1">
@@ -102,7 +102,7 @@ export const UtilityHub: React.FC = React.memo(() => {
                 </div>
                 <div className="w-2 h-2 bg-slate-900 z-10"></div>
               </div>
-              <span className="text-sm font-mono text-emerald-400 mt-3 animate-pulse">✓ Ready for Dynamic Download</span>
+              <span className="text-sm font-mono text-emerald-300 mt-3 animate-pulse">✓ Ready for Dynamic Download</span>
             </div>
           </div>
           </div>
@@ -113,7 +113,7 @@ export const UtilityHub: React.FC = React.memo(() => {
             <h3 className="text-xl md:text-2xl font-bold text-white mb-2 uppercase">JSON Formatter</h3>
             <div className="grid md:grid-cols-2 gap-4">
               <div>
-                <label className="text-sm font-mono uppercase tracking-widest text-slate-400 block mb-2">Raw JSON Input</label>
+                <label className="text-sm font-mono uppercase tracking-widest text-slate-100 block mb-2">Raw JSON Input</label>
                 <textarea
                   value={jsonText}
                   onChange={(e) => setJsonText(e.target.value)}
@@ -121,8 +121,8 @@ export const UtilityHub: React.FC = React.memo(() => {
                 />
               </div>
               <div>
-                <label className="text-sm font-mono uppercase tracking-widest text-slate-400 block mb-2">Formatted Output</label>
-                <pre className="w-full h-40 p-3 bg-slate-900 border border-slate-800 rounded-lg text-emerald-400 font-mono text-sm overflow-y-auto whitespace-pre-wrap">
+                <label className="text-sm font-mono uppercase tracking-widest text-slate-100 block mb-2">Formatted Output</label>
+                <pre className="w-full h-40 p-3 bg-slate-900 border border-slate-800 rounded-lg text-emerald-300 font-mono text-sm overflow-y-auto whitespace-pre-wrap">
                   {formattedJson || '// Click format button to trigger clean syntax verification.'}
                 </pre>
               </div>
@@ -139,7 +139,7 @@ export const UtilityHub: React.FC = React.memo(() => {
         {activeTab === 'csv' && (
           <div className="space-y-3 animate-fade-in">
             <h3 className="text-xl md:text-2xl font-bold text-white mb-2 uppercase">CSV Grid Preview</h3>
-            <label className="text-sm font-mono uppercase tracking-widest text-slate-400 block">Comma Separated Values (CSV Input)</label>
+            <label className="text-sm font-mono uppercase tracking-widest text-slate-100 block">Comma Separated Values (CSV Input)</label>
             <textarea
               value={csvText}
               onChange={(e) => setCsvText(e.target.value)}
@@ -153,9 +153,9 @@ export const UtilityHub: React.FC = React.memo(() => {
           <div className="space-y-6 animate-fade-in">
             <h3 className="text-xl md:text-2xl font-bold text-white mb-2 uppercase">SaaS ROI Metrics</h3>
             <div className="space-y-2">
-              <div className="flex justify-between text-sm font-mono uppercase tracking-wider text-slate-400">
+              <div className="flex justify-between text-sm font-mono uppercase tracking-wider text-slate-100">
                 <span>Monthly Enterprise Audit Target:</span>
-                <span className="text-blue-400 font-bold">${roiAmount} / mo</span>
+                <span className="text-blue-300 font-bold">${roiAmount} / mo</span>
               </div>
               <input
                 type="range"
@@ -168,17 +168,17 @@ export const UtilityHub: React.FC = React.memo(() => {
               />
             </div>
             <div className="grid sm:grid-cols-3 gap-4 text-center">
-              <div className="p-3 bg-slate-950 border border-slate-800/80 rounded-xl">
-                <span className="text-sm uppercase font-mono tracking-widest text-slate-400 block">Manual Process Cost</span>
-                <span className="text-xl font-bold text-rose-400 font-mono">${(roiAmount * 1.4).toFixed(0)}</span>
+              <div className="p-6 bg-slate-950 border border-slate-800/80 rounded-xl min-h-[120px] flex flex-col justify-center">
+                <span className="text-base uppercase font-mono tracking-widest text-slate-100 block">Manual Process Cost</span>
+                <span className="text-2xl font-bold text-rose-400 font-mono">${(roiAmount * 1.4).toFixed(0)}</span>
               </div>
-              <div className="p-3 bg-slate-950 border border-slate-800/80 rounded-xl ring-1 ring-emerald-500/30">
-                <span className="text-sm uppercase font-mono tracking-widest text-slate-400 block">ZipIntel Automated Cost</span>
-                <span className="text-xl font-bold text-emerald-400 font-mono">${(roiAmount * 0.15).toFixed(0)}</span>
+              <div className="p-6 bg-slate-950 border border-slate-800/80 rounded-xl ring-1 ring-emerald-500/30 min-h-[120px] flex flex-col justify-center">
+                <span className="text-base uppercase font-mono tracking-widest text-slate-100 block">ZipIntel Automated Cost</span>
+                <span className="text-2xl font-bold text-emerald-300 font-mono">${(roiAmount * 0.15).toFixed(0)}</span>
               </div>
-              <div className="p-3 bg-slate-950 border border-slate-800/80 rounded-xl bg-blue-950/20">
-                <span className="text-sm uppercase font-mono tracking-widest text-slate-400 block">Net Monthly Savings Moat</span>
-                <span className="text-xl font-bold text-blue-400 font-mono">${(roiAmount * 1.25).toFixed(0)}</span>
+              <div className="p-6 bg-slate-950 border border-slate-800/80 rounded-xl bg-blue-950/20 min-h-[120px] flex flex-col justify-center">
+                <span className="text-base uppercase font-mono tracking-widest text-slate-100 block">Net Monthly Savings Moat</span>
+                <span className="text-2xl font-bold text-blue-300 font-mono">${(roiAmount * 1.25).toFixed(0)}</span>
               </div>
             </div>
           </div>

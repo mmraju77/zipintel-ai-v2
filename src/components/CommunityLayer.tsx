@@ -40,7 +40,7 @@ export const CommunityLayer: React.FC = React.memo(() => {
   return (
     <div className="mt-8 p-6 bg-slate-900/40 border border-slate-800 rounded-2xl max-w-5xl mx-auto">
       <h3 className="text-xl font-bold text-white tracking-tight flex items-center gap-2 mb-4">
-        <span className="text-emerald-400">💬</span> Node Community Discussions
+        <span className="text-emerald-300">💬</span> Node Community Discussions
       </h3>
       
       {/* Input Form */}
@@ -63,8 +63,8 @@ export const CommunityLayer: React.FC = React.memo(() => {
             <div className="flex-1">
               <div className="flex items-center gap-2 flex-wrap">
                 <span className="text-sm font-mono font-bold text-white">{c.user}</span>
-                <span className="text-xs font-mono bg-blue-500/10 text-blue-400 px-1.5 py-0.2 rounded border border-blue-500/10">{c.badge}</span>
-                <span className="text-sm font-mono text-slate-600 ml-auto">{c.time}</span>
+                <span className="text-xs font-mono bg-blue-500/10 text-blue-300 px-1.5 py-0.2 rounded border border-blue-500/10">{c.badge}</span>
+                <span className="text-sm font-mono text-slate-200 ml-auto">{c.time}</span>
               </div>
               <p className="text-sm text-slate-300 mt-2 font-sans leading-relaxed">{c.text}</p>
             </div>
@@ -72,7 +72,7 @@ export const CommunityLayer: React.FC = React.memo(() => {
             {/* Upvote Button */}
             <button 
               onClick={() => handleVote(c.id)}
-              className="flex flex-col items-center justify-center px-2 py-1 bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded text-slate-400 hover:text-emerald-400 transition-colors"
+              className="flex flex-col items-center justify-center px-2 py-1 bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded text-slate-100 hover:text-emerald-300 transition-colors"
             >
               <span className="text-xl">▲</span>
               <span className="text-sm font-mono font-bold mt-0.5">{votes[c.id] || 0}</span>

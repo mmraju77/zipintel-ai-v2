@@ -8,12 +8,12 @@ export const MonetizationNodes: React.FC<{ zone?: 'sidebar' | 'bottom' }> = Reac
         {/* Decorative background pulse */}
         <div className="absolute -right-6 -top-6 w-20 h-20 bg-blue-500/10 rounded-full blur-xl"></div>
         
-        <span className="text-xs font-mono uppercase bg-blue-500/10 text-blue-400 border border-blue-500/20 px-1.5 py-0.5 rounded tracking-widest font-bold">
+        <span className="text-xs font-mono uppercase bg-blue-500/10 text-blue-300 border border-blue-500/20 px-1.5 py-0.5 rounded tracking-widest font-bold">
           Sponsored Asset
         </span>
         
         <h4 className="text-base font-bold text-white mt-2.5">Need Bulk API Automation?</h4>
-        <p className="text-sm text-slate-400 mt-1 leading-normal">
+        <p className="text-sm text-slate-100 mt-1 leading-normal">
           Export thousands of global routing indices directly via premium JSON Webhook wrapper configurations.
         </p>
         
@@ -28,19 +28,19 @@ export const MonetizationNodes: React.FC<{ zone?: 'sidebar' | 'bottom' }> = Reac
   return (
     <div className="w-full p-4 sm:p-5 bg-slate-900/80 border border-slate-800 rounded-xl flex flex-col md:flex-row items-center justify-between gap-4 mt-8 text-center md:text-left">
       <div className="flex flex-col sm:flex-row items-center gap-3.5">
-        <div className="w-10 h-10 rounded-lg bg-emerald-500/15 border border-emerald-500/20 flex items-center justify-center text-xl text-emerald-400 font-mono">
+        <div className="w-10 h-10 rounded-lg bg-emerald-500/15 border border-emerald-500/20 flex items-center justify-center text-xl text-emerald-300 font-mono">
           $
         </div>
         <div>
           <h4 className="text-base font-bold text-white">Automate Your Business Infrastructure With Top Affiliate Tools</h4>
-          <p className="text-sm text-slate-400 mt-0.5">Secure professional international business accounts with our verified premium hosting and finance nodes.</p>
+          <p className="text-sm text-slate-100 mt-0.5">Secure professional international business accounts with our verified premium hosting and finance nodes.</p>
         </div>
       </div>
       
       {/* Monetization Actions */}
       <div className="flex items-center gap-3">
         {/* Mock AdSense Slot Placeholder */}
-        <div className="hidden lg:block px-4 py-1.5 bg-slate-950 border border-slate-800 rounded text-sm font-mono text-slate-600 tracking-wider">
+        <div className="hidden lg:block px-4 py-1.5 bg-slate-950 border border-slate-800 rounded text-sm font-mono text-slate-200 tracking-wider">
           ADVERTISEMENT SLOTACTIVE
         </div>
         <a aria-label="Visit Hostinger (Advertisement)"

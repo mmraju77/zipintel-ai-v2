@@ -79,7 +79,7 @@ export const AffiliateWidgets: React.FC<AffiliateWidgetsProps> = React.memo(({ c
             </div>
           </div>
           
-          <p className="text-sm text-slate-400 font-medium leading-relaxed mb-6">
+          <p className="text-sm text-slate-100 font-medium leading-relaxed mb-6">
             {offer.description}
           </p>
 
@@ -87,7 +87,7 @@ export const AffiliateWidgets: React.FC<AffiliateWidgetsProps> = React.memo(({ c
             <button className="w-full bg-[#deff9a] hover:bg-[#c9f57d] text-midnight py-4 rounded-xl font-black text-sm uppercase tracking-widest transition-all flex items-center justify-center gap-2 active:scale-95 group/btn">
               {offer.cta} <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
             </button>
-            <p className="text-center text-sm text-slate-400 mt-3 font-bold uppercase tracking-widest italic">
+            <p className="text-center text-sm text-slate-100 mt-3 font-bold uppercase tracking-widest italic">
               * Sponsor verified for {region} sector
             </p>
           </div>
@@ -109,7 +109,7 @@ export const AffiliateWidgets: React.FC<AffiliateWidgetsProps> = React.memo(({ c
             <span className="text-sm font-black uppercase tracking-[0.2em]">Live Intel Feed</span>
           </div>
           <h3 className="text-sm font-black text-white tracking-tighter mb-2 italic">Hyper-Local Infrastructure Alerts</h3>
-          <p className="text-sm text-slate-400 font-medium leading-relaxed mb-6">
+          <p className="text-sm text-slate-100 font-medium leading-relaxed mb-6">
             Get instant notifications on 5G node upgrades, local rental market shifts, and logistics expansions in <span className="text-white">{region}</span>.
           </p>
 
@@ -121,7 +121,7 @@ export const AffiliateWidgets: React.FC<AffiliateWidgetsProps> = React.memo(({ c
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter node email..."
-                className="flex-1 bg-slate-900 border border-slate-800 focus:border-[#deff9a]/50 focus:ring-0 rounded-xl px-4 py-3 text-sm text-white font-medium placeholder:text-slate-600 outline-none transition-all"
+                className="flex-1 bg-slate-900 border border-slate-800 focus:border-[#deff9a]/50 focus:ring-0 rounded-xl px-4 py-3 text-sm text-white font-medium placeholder:text-slate-200 outline-none transition-all"
               />
               <button className="bg-slate-800 hover:bg-slate-700 text-white p-3 rounded-xl transition-all active:scale-90">
                 <ArrowRight className="w-5 h-5" />
@@ -146,7 +146,7 @@ export const AffiliateWidgets: React.FC<AffiliateWidgetsProps> = React.memo(({ c
                 </div>
               ))}
             </div>
-            <span className="text-sm text-slate-400 font-bold uppercase tracking-widest">
+            <span className="text-sm text-slate-100 font-bold uppercase tracking-widest">
               +1.2k Subscribed in this sector
             </span>
           </div>

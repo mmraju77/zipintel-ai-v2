@@ -16,13 +16,13 @@ export default function AboutUs() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <span className="text-sm font-mono uppercase tracking-[0.3em] text-blue-500 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full mb-6 inline-block">
+          <span className="text-sm font-mono uppercase tracking-[0.3em] text-blue-300 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full mb-6 inline-block">
             Founding Vision
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white tracking-tight mb-4">
-            Architecting the Future of <span className="text-blue-500">Global Financial Data</span>
+            Architecting the Future of <span className="text-blue-300">Global Financial Data</span>
           </h1>
-          <p className="text-slate-400 text-xl max-w-2xl mx-auto leading-relaxed">
+          <p className="text-slate-100 text-xl max-w-2xl mx-auto leading-relaxed">
             ZipIntel AI is built on the principle of deterministic precision. We bridge the gap between global postal nodes and complex financial routing infrastructures.
           </p>
         </motion.div>
@@ -48,7 +48,7 @@ export default function AboutUs() {
             <div className="md:col-span-2 space-y-6">
               <div>
                 <h2 className="text-3xl font-bold text-white mb-1">Munchangi Matyaraju (mm Raju)</h2>
-                <p className="text-blue-400 font-mono text-base uppercase tracking-widest font-semibold italic">Chief AI Architect & Founder</p>
+                <p className="text-blue-300 font-mono text-base uppercase tracking-widest font-semibold italic">Chief AI Architect & Founder</p>
               </div>
 
               <p className="text-slate-300 leading-relaxed italic border-l-2 border-blue-500/50 pl-6 text-base">
@@ -57,11 +57,11 @@ export default function AboutUs() {
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="p-3 bg-slate-950/50 border border-slate-800/80 rounded-xl">
-                  <p className="text-sm text-slate-400 uppercase font-bold mb-1">Specialization</p>
+                  <p className="text-sm text-slate-100 uppercase font-bold mb-1">Specialization</p>
                   <p className="text-sm text-white font-mono">Neural Routing Matrix</p>
                 </div>
                 <div className="p-3 bg-slate-950/50 border border-slate-800/80 rounded-xl">
-                  <p className="text-sm text-slate-400 uppercase font-bold mb-1">Project Scale</p>
+                  <p className="text-sm text-slate-100 uppercase font-bold mb-1">Project Scale</p>
                   <p className="text-sm text-white font-mono">17+ Jurisdictions</p>
                 </div>
               </div>
@@ -71,7 +71,7 @@ export default function AboutUs() {
                   href="https://www.linkedin.com/in/munchingi-matya-raju-52baa71bb/"
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="p-2.5 bg-blue-600/10 hover:bg-blue-600 border border-blue-500/20 text-blue-400 hover:text-white rounded-lg transition-all"
+                  className="p-2.5 bg-blue-600/10 hover:bg-blue-600 border border-blue-500/20 text-blue-300 hover:text-white rounded-lg transition-all"
                 >
                   <Linkedin className="w-5 h-5" />
                 </a>
@@ -112,9 +112,9 @@ export default function AboutUs() {
               transition={{ delay: 0.4 + (i * 0.1) }}
               className="p-6 bg-slate-900/40 border border-slate-800/80 rounded-2xl"
             >
-              <v.icon className="w-8 h-8 text-blue-500 mb-4" />
+              <v.icon className="w-8 h-8 text-blue-300 mb-4" />
               <h4 className="text-white font-bold mb-2 uppercase tracking-tight text-base">{v.title}</h4>
-              <p className="text-sm text-slate-400 leading-relaxed">{v.desc}</p>
+              <p className="text-sm text-slate-100 leading-relaxed">{v.desc}</p>
             </motion.div>
           ))}
         </div>
