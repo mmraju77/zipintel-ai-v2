@@ -8,6 +8,7 @@ import { useI18n } from '../lib/i18n';
 import { GlobalSearch } from '../components/GlobalSearch';
 import { UtilityHub } from '../components/UtilityHub';
 import { MonetizationNodes } from '../components/MonetizationNodes';
+import { AdPlaceholder } from '../components/AdPlaceholder';
 
 const MotionLink = motion.create(Link);
 
@@ -107,7 +108,7 @@ export default function Home() {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter leading-tight lg:leading-none text-white uppercase italic break-words px-4"
+          className="text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter leading-tight lg:leading-none text-yellow-400 uppercase italic break-words px-4"
         >
           {t('heroTitle').split(' ')[0]} <span className="gold-gradient-text">{t('heroTitle').split(' ')[1] || 'Intel'}</span>
         </motion.h1>
@@ -176,7 +177,7 @@ export default function Home() {
                     </div>
 
                     <h3 className="text-xl font-black text-white group-hover:text-gold transition-colors uppercase italic mb-1">{item.name}</h3>
-                    <p className="text-sm text-slate-100 font-bold uppercase tracking-tighter mb-4">
+                    <p className="text-base text-slate-100 font-bold uppercase tracking-tighter mb-4">
                       {item.type}
                     </p>
 
@@ -289,6 +290,10 @@ export default function Home() {
         </div>
       </section>
 
+            <div className="w-full py-4">
+        <AdPlaceholder format="banner" />
+      </div>
+      
       {/* Intelligence Bento */}
       <section className="grid grid-cols-1 md:grid-cols-4 gap-5">
           {/* AI Parser Highlight */}
@@ -337,8 +342,8 @@ export default function Home() {
 
           {/* Network Stats */}
           <div className="glass-card p-8 flex flex-col items-center justify-center text-center">
-            <p className="text-sm text-slate-100 mb-2 uppercase font-black tracking-widest">{t('networkLatency')}</p>
-            <p className="text-5xl font-light text-white italic">14<span className="text-gold text-xl ml-1 font-bold">ms</span></p>
+            <p className="text-base text-slate-100 mb-2 uppercase font-black tracking-widest">{t('networkLatency')}</p>
+            <p className="text-5xl font-light text-yellow-400 italic">14<span className="text-gold text-xl ml-1 font-bold">ms</span></p>
             <div className="w-full h-1 bg-slate-800 rounded-full mt-6 overflow-hidden">
               <motion.div 
                 initial={{ width: 0 }}

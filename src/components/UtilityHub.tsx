@@ -50,7 +50,7 @@ export const UtilityHub: React.FC = React.memo(() => {
   return (
     <div className="mt-12 p-6 bg-slate-900/60 border border-slate-800 rounded-2xl max-w-6xl mx-auto shadow-zipGlow">
       <div className="mb-6">
-        <h2 className="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+        <h2 className="text-2xl font-bold text-yellow-400 tracking-tight flex items-center gap-2">
           <span className="text-blue-300">⚡</span> Core AI & Utility Tools Hub
         </h2>
         <p className="text-slate-100 text-base mt-1">Free instant developer utilities and automated local clearing simulators.</p>

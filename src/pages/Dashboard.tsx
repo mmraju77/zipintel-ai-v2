@@ -25,7 +25,7 @@ export default function Dashboard() {
       {/* Dashboard Top Header */}
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 border-b border-slate-800 pb-5">
         <div>
-          <h1 className="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+          <h1 className="text-2xl font-bold text-yellow-400 tracking-tight flex items-center gap-2">
             <span className="text-blue-300">📊</span> Workspace Dashboard
           </h1>
           <p className="text-sm text-slate-100 mt-1">Welcome back, Developer Node. Monitor your saved global matrices and API credits.</p>

@@ -103,7 +103,7 @@ export const DistanceCalculator: React.FC<DistanceCalculatorProps> = ({
                 <span className="text-sm font-black text-gold uppercase tracking-[0.2em]">{t('logisticsStatus')}</span>
               </div>
               <div className="flex items-center gap-2">
-                 <span className="px-2 py-0.5 rounded bg-blue-500/10 border border-blue-500/20 text-xs font-black text-blue-300 uppercase tracking-widest flex items-center gap-1">
+                 <span className="px-2 py-0.5 rounded bg-blue-500/10 border border-blue-500/20 text-sm font-black text-blue-300 uppercase tracking-widest flex items-center gap-1">
                    <ShieldCheck className="w-2.5 h-2.5" /> {t('verifiedAcquisition')}: {t('accurate100')}
                  </span>
                  <span className="px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-sm font-black text-emerald-300 uppercase tracking-widest italic">{t('logisticsPass')}: GREEN</span>
@@ -119,7 +119,7 @@ export const DistanceCalculator: React.FC<DistanceCalculatorProps> = ({
                 <div className="flex items-center gap-3">
                   <p className="text-xl font-black text-white italic tracking-tighter">{distResult.distance}</p>
                   {distResult.isHighway && (
-                    <span className="px-1.5 py-0.5 rounded-sm bg-gold/10 border border-gold/20 text-xs font-black text-gold uppercase tracking-widest flex items-center gap-1">
+                    <span className="px-1.5 py-0.5 rounded-sm bg-gold/10 border border-gold/20 text-sm font-black text-gold uppercase tracking-widest flex items-center gap-1">
                       <Target className="w-2 h-2" /> {t('highwayRoutingActive')}
                     </span>
                   )}

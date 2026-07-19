@@ -166,7 +166,7 @@ export const GlobalSearch: React.FC = React.memo(() => {
             className="absolute top-full left-0 right-0 mt-3 bg-[#0a0f1e] border border-[#deff9a]/10 rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.8)] z-[60] backdrop-blur-xl"
           >
             <div className="p-2 border-b border-white/5 bg-white/[0.02]">
-              <p className="text-xs font-black text-[#deff9a] uppercase tracking-[0.2em] px-3 py-1">Intelligence Suggestions</p>
+              <p className="text-sm font-black text-[#deff9a] uppercase tracking-[0.2em] px-3 py-1">Intelligence Suggestions</p>
             </div>
             {results.map((result, idx) => (
               <button aria-label="Action" 

@@ -195,7 +195,7 @@ export default function AITools() {
             <Sparkles className="w-3 h-3" />
             <span>Premium AI Workspace</span>
           </motion.div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tighter uppercase italic leading-tight lg:leading-none break-words">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-yellow-400 tracking-tighter uppercase italic leading-tight lg:leading-none break-words">
             AI <span className="gold-gradient-text uppercase">{t('aiUtilities').split(' ')[1] || 'Utilities'}</span>
           </h1>
           <p className="text-slate-100 max-w-xl mx-auto font-medium">
@@ -216,7 +216,7 @@ export default function AITools() {
                   <Languages className="w-7 h-7 text-gold" />
                 </div>
                 <div>
-                  <h2 className="text-xl font-black text-white uppercase italic leading-tight">{t('addressStandardizer')}</h2>
+                  <h2 className="text-xl font-black text-yellow-400 uppercase italic leading-tight">{t('addressStandardizer')}</h2>
                   <p className="text-sm text-slate-100 font-bold uppercase tracking-[3px]">{t('normalizeMessyInput')}</p>
                 </div>
               </div>
@@ -267,14 +267,14 @@ export default function AITools() {
                   <div className="flex gap-2">
                     <button
                       onClick={handleDownloadPDF}
-                      className="flex items-center gap-2 px-3 py-1.5 bg-slate-800/50 hover:bg-gold/20 hover:text-gold rounded-lg transition-all text-slate-100 text-xs font-black uppercase tracking-widest"
+                      className="flex items-center gap-2 px-3 py-1.5 bg-slate-800/50 hover:bg-gold/20 hover:text-gold rounded-lg transition-all text-slate-100 text-sm font-black uppercase tracking-widest"
                     >
                       <Download className="w-3 h-3" />
                       <span>PDF</span>
                     </button>
                     <button
                       onClick={copyToClipboard}
-                      className="flex items-center gap-2 px-3 py-1.5 bg-slate-800/50 hover:bg-gold/20 hover:text-gold rounded-lg transition-all text-slate-100 text-xs font-black uppercase tracking-widest"
+                      className="flex items-center gap-2 px-3 py-1.5 bg-slate-800/50 hover:bg-gold/20 hover:text-gold rounded-lg transition-all text-slate-100 text-sm font-black uppercase tracking-widest"
                     >
                       {copied ? <Check className="w-3 h-3 text-emerald-300" /> : <Copy className="w-3 h-3" />}
                       <span>{copied ? t('copied') : t('copy')}</span>
@@ -300,7 +300,7 @@ export default function AITools() {
                   <MapPin className="w-7 h-7 text-gold" />
                 </div>
                 <div>
-                  <h2 className="text-xl font-black text-white uppercase italic leading-tight">{t('distanceCalculator')}</h2>
+                  <h2 className="text-xl font-black text-yellow-400 uppercase italic leading-tight">{t('distanceCalculator')}</h2>
                   <p className="text-sm text-slate-100 font-bold uppercase tracking-[3px]">Geospatial Routing Node</p>
                 </div>
               </div>
@@ -382,7 +382,7 @@ export default function AITools() {
                   <Sparkles className="w-7 h-7 text-gold" />
                 </div>
                 <div>
-                  <h2 className="text-xl font-black text-white uppercase italic leading-tight">{t('localityInsights')}</h2>
+                  <h2 className="text-xl font-black text-yellow-400 uppercase italic leading-tight">{t('localityInsights')}</h2>
                   <p className="text-sm text-slate-100 font-bold uppercase tracking-[3px]">{t('areaContextAnalysis')}</p>
                 </div>
               </div>
@@ -439,15 +439,15 @@ export default function AITools() {
         {/* Footnotes / Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
            <div className="glass-card p-6 border-slate-800/50">
-              <p className="text-xs text-slate-100 font-black uppercase tracking-widest mb-1">Live Endpoint</p>
+              <p className="text-sm text-slate-100 font-black uppercase tracking-widest mb-1">Live Endpoint</p>
               <p className="text-sm font-bold text-white font-mono">api.v4.normalize.zipintel.ai</p>
            </div>
            <div className="glass-card p-6 border-slate-800/50">
-              <p className="text-xs text-slate-100 font-black uppercase tracking-widest mb-1">Latency Avg</p>
+              <p className="text-sm text-slate-100 font-black uppercase tracking-widest mb-1">Latency Avg</p>
               <p className="text-sm font-bold text-emerald-300 font-mono">412ms</p>
            </div>
            <div className="glass-card p-6 border-slate-800/50">
-              <p className="text-xs text-slate-100 font-black uppercase tracking-widest mb-1">Node Status</p>
+              <p className="text-sm text-slate-100 font-black uppercase tracking-widest mb-1">Node Status</p>
               <p className="text-sm font-bold text-gold font-mono uppercase">Decentralized / Active</p>
            </div>
         </div>

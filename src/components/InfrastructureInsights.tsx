@@ -135,7 +135,7 @@ export const InfrastructureInsights: React.FC<InfrastructureInsightsProps> = Rea
       className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mt-8 w-full"
     >
       {/* Card 1: Network & Internet */}
-      <motion.div variants={item} className="p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-gold/30 transition-all group overflow-hidden">
+      <motion.div variants={item} className="p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-gold/30 transition-all group overflow-hidden">
         <div className="flex justify-between items-start mb-6">
           <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
             <Wifi className="w-5 h-5 text-blue-300" />
@@ -155,7 +155,7 @@ export const InfrastructureInsights: React.FC<InfrastructureInsightsProps> = Rea
       </motion.div>
 
       {/* Card 2: Logistics & Courier */}
-      <motion.div variants={item} className="p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-gold/30 transition-all group overflow-hidden">
+      <motion.div variants={item} className="p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-gold/30 transition-all group overflow-hidden">
         <div className="flex justify-between items-start mb-6">
           <div className="w-10 h-10 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center">
             <Truck className="w-5 h-5 text-gold" />
@@ -175,7 +175,7 @@ export const InfrastructureInsights: React.FC<InfrastructureInsightsProps> = Rea
       </motion.div>
 
       {/* Card 3: E-Commerce Delivery */}
-      <motion.div variants={item} className="p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-gold/30 transition-all group overflow-hidden">
+      <motion.div variants={item} className="p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-gold/30 transition-all group overflow-hidden">
         <div className="flex justify-between items-start mb-6">
           <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
             <ShoppingBag className="w-5 h-5 text-emerald-300" />
@@ -198,7 +198,7 @@ export const InfrastructureInsights: React.FC<InfrastructureInsightsProps> = Rea
       </motion.div>
 
       {/* Card 4: Financial Indicators */}
-      <motion.div variants={item} className="p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-gold/30 transition-all group overflow-hidden">
+      <motion.div variants={item} className="p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-gold/30 transition-all group overflow-hidden">
         <div className="flex justify-between items-start mb-6">
           <div className="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center">
             <Landmark className="w-5 h-5 text-indigo-300" />
@@ -222,14 +222,14 @@ export const InfrastructureInsights: React.FC<InfrastructureInsightsProps> = Rea
             </div>
             <div className="flex items-center gap-1.5">
               <Shield className="w-2.5 h-2.5 text-indigo-300/50" />
-              <span className="text-xs font-black text-slate-200 uppercase tracking-widest">Regulatory Compliant</span>
+              <span className="text-sm font-black text-slate-200 uppercase tracking-widest">Regulatory Compliant</span>
             </div>
           </div>
         </div>
       </motion.div>
 
       {/* Card 5: Financial Routing Infrastructure */}
-      <motion.div variants={item} className="p-6 rounded-3xl bg-slate-900 border border-slate-800 hover:border-gold/30 transition-all group relative overflow-hidden">
+      <motion.div variants={item} className="p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-gold/30 transition-all group relative overflow-hidden">
         <div className="absolute top-0 right-0 w-32 h-32 bg-gold/5 blur-3xl rounded-full -mr-16 -mt-16" />
         <div className="flex justify-between items-center mb-6 relative z-10">
           <div className="w-10 h-10 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center">
@@ -273,7 +273,7 @@ export const InfrastructureInsights: React.FC<InfrastructureInsightsProps> = Rea
                  <div className="w-4 h-4 rounded-full bg-gold/20 border border-gold/40" />
                  <div className="w-4 h-4 rounded-full bg-slate-800 border border-slate-700" />
               </div>
-              <span className="text-xs font-black text-slate-100 uppercase tracking-widest italic">ISO 20022 Compliant Node</span>
+              <span className="text-sm font-black text-slate-100 uppercase tracking-widest italic">ISO 20022 Compliant Node</span>
             </div>
           </div>
         </div>

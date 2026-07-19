@@ -19,7 +19,7 @@ export default function AboutUs() {
           <span className="text-sm font-mono uppercase tracking-[0.3em] text-blue-300 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full mb-6 inline-block">
             Founding Vision
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white tracking-tight mb-4">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-yellow-400 tracking-tight mb-4">
             Architecting the Future of <span className="text-blue-300">Global Financial Data</span>
           </h1>
           <p className="text-slate-100 text-xl max-w-2xl mx-auto leading-relaxed">
@@ -47,7 +47,7 @@ export default function AboutUs() {
             {/* Profile Details */}
             <div className="md:col-span-2 space-y-6">
               <div>
-                <h2 className="text-3xl font-bold text-white mb-1">Munchangi Matyaraju (mm Raju)</h2>
+                <h2 className="text-3xl font-bold text-yellow-400 mb-1">Munchangi Matyaraju (mm Raju)</h2>
                 <p className="text-blue-300 font-mono text-base uppercase tracking-widest font-semibold italic">Chief AI Architect & Founder</p>
               </div>
 

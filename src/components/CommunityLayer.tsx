@@ -59,11 +59,11 @@ export const CommunityLayer: React.FC = React.memo(() => {
       {/* Dynamic Comments List */}
       <div className="space-y-4">
         {comments.map((c) => (
-          <div key={c.id} className="p-4 bg-slate-950/60 border border-slate-800/60 rounded-xl flex gap-3 items-start">
+          <div key={c.id} className="p-6 bg-slate-950/60 border border-slate-800/60 rounded-xl flex gap-3 items-start">
             <div className="flex-1">
               <div className="flex items-center gap-2 flex-wrap">
                 <span className="text-sm font-mono font-bold text-white">{c.user}</span>
-                <span className="text-xs font-mono bg-blue-500/10 text-blue-300 px-1.5 py-0.2 rounded border border-blue-500/10">{c.badge}</span>
+                <span className="text-sm font-mono bg-blue-500/10 text-blue-300 px-1.5 py-0.2 rounded border border-blue-500/10">{c.badge}</span>
                 <span className="text-sm font-mono text-slate-200 ml-auto">{c.time}</span>
               </div>
               <p className="text-sm text-slate-300 mt-2 font-sans leading-relaxed">{c.text}</p>

@@ -15,7 +15,7 @@ export const TrustFooter: React.FC = React.memo(() => {
               Zip<span className="text-blue-300 font-medium">Intel</span> AI
             </span>
           </div>
-          <p className="text-base text-slate-100 leading-relaxed max-w-sm">
+          <p className="text-base text-slate-100 leading-relaxed max-w-xl">
             Oka scalable digital ecosystem for context-aware global financial routing matrix computations. Providing deterministic verification patterns for 17 target countries with zero latency.
           </p>
         </div>
@@ -54,7 +54,7 @@ export const TrustFooter: React.FC = React.memo(() => {
         <h4 className="text-base font-mono uppercase tracking-[0.2em] text-slate-100 font-bold mb-3 border-b border-slate-800 pb-2">
           Global Regulatory & Financial Disclosure
         </h4>
-        <div className="grid md:grid-cols-2 gap-6 text-sm font-mono leading-relaxed text-slate-100 italic">
+        <div className="grid md:grid-cols-2 gap-6 text-base font-mono leading-relaxed text-slate-100 italic">
           <p>
             <strong className="text-slate-100 uppercase">Financial Accuracy:</strong> ZipIntel AI is a data analysis platform. Routing codes (IFSC, ABA, SWIFT, IBAN) are generated via deterministic interpolation. While we maintain a 99.9% verification baseline, users MUST verify all mission-critical data with their primary financial institution before executing transactions. We are not a bank or registered financial advisor.
           </p>
