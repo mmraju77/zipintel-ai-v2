@@ -118,28 +118,30 @@ export const GlobalSearch: React.FC = () => {
     <div className="relative max-w-2xl mx-auto z-50 mt-8" ref={dropdownRef}>
       <div className="relative group">
         <div className="absolute inset-0 bg-[#deff9a]/10 blur-2xl rounded-full opacity-0 group-focus-within:opacity-100 transition-opacity" />
-        <div className="relative flex items-center bg-[#0a0f1e] border border-slate-800 rounded-2xl p-2 pl-6 shadow-2xl focus-within:border-[#deff9a] transition-all ring-1 ring-slate-800/50 focus-within:ring-[#deff9a]/30">
-          {isSearching ? (
-            <Loader2 className="w-5 h-5 text-[#deff9a] animate-spin" />
-          ) : (
-            <Search className="w-5 h-5 text-slate-500 group-focus-within:text-[#deff9a] transition-colors" />
-          )}
-          <input
-            type="text"
-            value={query}
-            onChange={(e) => handleSearch(e.target.value)}
-            onFocus={() => query.length >= 2 && setShowDropdown(true)}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter' && results.length > 0) {
-                handleSelect(results[0]);
-              }
-            }}
-            placeholder="Global Search: Postal Code, Region, or Country..."
-            className="bg-transparent border-none focus:ring-0 w-full text-white font-medium px-4 py-3 placeholder:text-slate-600 text-sm"
-          />
+        <div className="relative flex flex-col sm:flex-row items-stretch sm:items-center bg-[#0a0f1e] border border-slate-800 rounded-2xl p-2 sm:pl-6 shadow-2xl focus-within:border-[#deff9a] transition-all ring-1 ring-slate-800/50 focus-within:ring-[#deff9a]/30 gap-2 sm:gap-0">
+          <div className="flex items-center flex-1 w-full relative">
+            {isSearching ? (
+              <Loader2 className="w-5 h-5 text-[#deff9a] animate-spin absolute left-3 sm:static" />
+            ) : (
+              <Search className="w-5 h-5 text-slate-500 group-focus-within:text-[#deff9a] transition-colors absolute left-3 sm:static" />
+            )}
+            <input
+              type="text"
+              value={query}
+              onChange={(e) => handleSearch(e.target.value)}
+              onFocus={() => query.length >= 2 && setShowDropdown(true)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' && results.length > 0) {
+                  handleSelect(results[0]);
+                }
+              }}
+              placeholder="Global Search: Postal Code, Region, or Country..."
+              className="bg-transparent border-none focus:ring-0 w-full text-white font-medium pl-10 sm:pl-4 pr-4 py-3 sm:py-3 placeholder:text-slate-600 text-sm"
+            />
+          </div>
           <button 
             onClick={() => results.length > 0 && handleSelect(results[0])}
-            className="bg-[#deff9a] hover:bg-[#c9f57d] text-midnight px-6 py-3 rounded-xl font-black text-[10px] uppercase tracking-widest transition-all flex items-center gap-2 active:scale-95"
+            className="w-full sm:w-auto bg-[#deff9a] hover:bg-[#c9f57d] text-midnight px-6 py-3 rounded-xl font-black text-[10px] uppercase tracking-widest transition-all flex items-center justify-center gap-2 active:scale-95 flex-shrink-0"
           >
             ANALYZE <ArrowRight className="w-3 h-3 stroke-[3]" />
           </button>

@@ -59,7 +59,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-midnight font-sans text-slate-200">
       {/* Mobile Header */}
-      <header className="lg:hidden flex items-center justify-between p-4 bg-[#020617] border-b border-slate-800 sticky top-0 z-50">
+      <header className="md:hidden flex items-center justify-between p-4 bg-[#020617] border-b border-slate-800 sticky top-0 z-50">
         <Logo />
         <button onClick={toggleMobileMenu} className="text-slate-100 p-1">
           {isMobileMenuOpen ? <X /> : <Menu />}
@@ -69,7 +69,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div className="flex h-screen overflow-hidden">
         {/* Desktop Sidebar */}
         <aside 
-          className={`hidden lg:flex flex-col h-screen sticky top-0 bg-slate-sidebar border-r border-slate-800 transition-all duration-300 ${isSidebarOpen ? 'w-64' : 'w-20'}`}
+          className={`hidden md:flex flex-col h-screen sticky top-0 bg-slate-sidebar border-r border-slate-800 transition-all duration-300 ${isSidebarOpen ? 'w-64' : 'w-20'}`}
         >
           <div className="p-5 mb-4">
             <Logo collapsed={!isSidebarOpen} />
@@ -133,13 +133,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 onClick={toggleMobileMenu}
-                className="fixed inset-0 bg-black/80 backdrop-blur-md z-40 lg:hidden"
+                className="fixed inset-0 bg-black/80 backdrop-blur-md z-40 md:hidden"
               />
               <motion.div
                 initial={{ x: '-100%' }}
                 animate={{ x: 0 }}
                 exit={{ x: '-100%' }}
-                className="fixed inset-y-0 left-0 w-80 bg-slate-sidebar z-50 lg:hidden p-6 overflow-y-auto border-r border-slate-800"
+                className="fixed inset-y-0 left-0 w-80 max-w-[80vw] bg-slate-sidebar z-50 md:hidden p-6 overflow-y-auto border-r border-slate-800"
               >
                 <div className="flex items-center justify-between mb-10">
                   <Logo />
@@ -190,9 +190,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </AnimatePresence>
 
         {/* Main Content Area */}
-        <main className="flex-1 w-full relative flex flex-col h-full bg-gradient-to-br from-[#020617] to-[#0a101f] overflow-y-auto">
+        <main className="flex-1 w-full relative flex flex-col h-full bg-gradient-to-br from-[#020617] to-[#0a101f] overflow-y-auto overflow-x-hidden">
           {/* Top Search Bar (Desktop) */}
-          <div className="hidden lg:flex items-center justify-between p-6 sticky top-0 z-30 bg-[#020617]/80 backdrop-blur-xl border-b border-slate-800/50">
+          <div className="hidden md:flex items-center justify-between p-6 sticky top-0 z-30 bg-[#020617]/80 backdrop-blur-xl border-b border-slate-800/50">
             <div className="max-w-2xl w-full relative">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 w-5 h-5" />
               <input 
@@ -230,7 +230,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
 
           <div className="flex-1 w-full">
-            <div className="max-w-7xl mx-auto p-4 lg:p-8">
+            <div className="max-w-7xl mx-auto p-4 md:p-8">
               {children}
             </div>
 
