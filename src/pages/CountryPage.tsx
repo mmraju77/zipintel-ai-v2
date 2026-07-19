@@ -109,13 +109,19 @@ export default function CountryPage() {
         </div>
 
         {/* Card 3: Our Financial Routing Infrastructure Engine (Card 5 from previous fix) */}
-        <div className="md:col-span-1">
+        </div>
+      <div className="max-w-5xl mx-auto mt-6">
+        <div className="w-full">
           <InfrastructureInsights 
             districtId={currentZip} 
             language={language}
             countryCode={currentCountry} 
             zipCode={currentZip} 
           />
+          </div>
+      </div>
+      <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 mt-6">
+        <div className="md:col-span-3">
           <div className="mt-6">
             <MonetizationNodes zone="sidebar" />
           </div>
