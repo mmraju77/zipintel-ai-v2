@@ -114,7 +114,7 @@ export default function Home() {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-5xl lg:text-8xl font-black tracking-tighter leading-none text-white uppercase italic"
+          className="text-4xl md:text-5xl lg:text-8xl font-black tracking-tighter leading-tight lg:leading-none text-white uppercase italic break-words px-4"
         >
           {t('heroTitle').split(' ')[0]} <span className="gold-gradient-text">{t('heroTitle').split(' ')[1] || 'Intel'}</span>
         </motion.h1>
@@ -130,7 +130,7 @@ export default function Home() {
               exit={{ opacity: 0, height: 0 }}
               className="mt-12 space-y-6 pt-8 border-t border-slate-800/50"
             >
-              <div className="flex items-center justify-between px-2">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between px-2 gap-4">
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center border border-gold/30">
                     <Zap className="w-4 h-4 text-gold animate-pulse" />
@@ -216,7 +216,7 @@ export default function Home() {
       {/* Favorites Section */}
       {favorites.length > 0 && (
         <section className="space-y-6">
-          <div className="flex items-center gap-3">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 px-2">
             <div className="w-8 h-8 rounded-lg bg-red-500/10 flex items-center justify-center border border-red-500/20">
               <Heart className="w-4 h-4 text-red-500 fill-red-500" />
             </div>
@@ -258,7 +258,7 @@ export default function Home() {
 
       {/* Country Grid */}
       <section className="space-y-6">
-        <div className="flex items-center justify-between px-2">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between px-2 gap-4">
           <div>
             <h3 className="text-[10px] font-black text-slate-500 uppercase tracking-widest">{t('globalDirectories')}</h3>
             <p className="text-xl font-bold text-white uppercase italic">{t('selectRegion')}</p>

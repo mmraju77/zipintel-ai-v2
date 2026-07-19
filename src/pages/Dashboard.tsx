@@ -19,7 +19,7 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-[#0B0F19] text-slate-300 p-6 font-sans">
       {/* Dashboard Top Header */}
-      <div className="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-4 mb-8 border-b border-slate-800 pb-5">
+      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 border-b border-slate-800 pb-5">
         <div>
           <h1 className="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
             <span className="text-blue-500">📊</span> Workspace Dashboard

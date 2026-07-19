@@ -26,8 +26,8 @@ export const MonetizationNodes: React.FC<{ zone?: 'sidebar' | 'bottom' }> = ({ z
 
   // Bottom Banner View - Perfect for pSEO Layout Footers
   return (
-    <div className="w-full p-5 bg-slate-900/80 border border-slate-800 rounded-xl flex flex-wrap items-center justify-between gap-4 mt-8">
-      <div className="flex items-center gap-3.5">
+    <div className="w-full p-4 sm:p-5 bg-slate-900/80 border border-slate-800 rounded-xl flex flex-col md:flex-row items-center justify-between gap-4 mt-8 text-center md:text-left">
+      <div className="flex flex-col sm:flex-row items-center gap-3.5">
         <div className="w-10 h-10 rounded-lg bg-emerald-500/15 border border-emerald-500/20 flex items-center justify-center text-xl text-emerald-400 font-mono">
           $
         </div>

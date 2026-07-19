@@ -65,7 +65,7 @@ export const TrustFooter: React.FC = () => {
       </div>
 
       {/* Bottom Footer Fine Print */}
-      <div className="max-w-6xl mx-auto pt-6 border-t border-slate-900 flex flex-wrap justify-between items-center gap-4 text-[11px] font-mono text-slate-600">
+      <div className="max-w-6xl mx-auto pt-6 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] font-mono text-slate-600 text-center md:text-left">
         <p>© {currentYear} ZipIntel AI Digital Infrastructure. All rights reserved.</p>
         <p className="text-slate-500">
           Founder Status:{" "}

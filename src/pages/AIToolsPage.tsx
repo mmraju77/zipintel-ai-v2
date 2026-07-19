@@ -195,7 +195,7 @@ export default function AITools() {
             <Sparkles className="w-3 h-3" />
             <span>Premium AI Workspace</span>
           </motion.div>
-          <h1 className="text-5xl lg:text-7xl font-black text-white tracking-tighter uppercase italic leading-none">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-white tracking-tighter uppercase italic leading-tight lg:leading-none break-words">
             AI <span className="gold-gradient-text uppercase">{t('aiUtilities').split(' ')[1] || 'Utilities'}</span>
           </h1>
           <p className="text-slate-500 max-w-xl mx-auto font-medium">
