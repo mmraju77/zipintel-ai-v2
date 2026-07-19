@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'motion/react';
-import { Globe, Shield, Cpu, ArrowRight, Zap, Target, Database, MapPin, ChevronRight, Hash, Loader2, Heart, Download } from 'lucide-react';
+import { Cpu, ArrowRight, Zap, Database, MapPin, ChevronRight, Hash, Heart, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { COUNTRIES, SearchResult } from '../types';
-import { POSTAL_DATA } from '../data/postalData';
 import { useI18n } from '../lib/i18n';
 import { GlobalSearch } from '../components/GlobalSearch';
 import { UtilityHub } from '../components/UtilityHub';
@@ -13,26 +12,19 @@ import { MonetizationNodes } from '../components/MonetizationNodes';
 const MotionLink = motion.create(Link);
 
 export default function Home() {
-  const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
-  const [isSearching, setIsSearching] = useState(false);
-  const [history, setHistory] = useState<string[]>([]);
+  const [searchResults] = useState<SearchResult[]>([]);
+      
   const [favorites, setFavorites] = useState<SearchResult[]>([]);
-  const [searchError, setSearchError] = useState<string | null>(null);
-  const { t } = useI18n();
+    const { t } = useI18n();
 
   useEffect(() => {
-    const savedHistory = localStorage.getItem('search-history');
-    if (savedHistory) setHistory(JSON.parse(savedHistory));
+    
+    
 
     const savedFavorites = localStorage.getItem('favorite-localities');
     if (savedFavorites) setFavorites(JSON.parse(savedFavorites));
   }, []);
 
-  const addToHistory = (query: string) => {
-    const newHistory = [query, ...history.filter(h => h !== query)].slice(0, 5);
-    setHistory(newHistory);
-    localStorage.setItem('search-history', JSON.stringify(newHistory));
-  };
 
   const toggleFavorite = (item: SearchResult) => {
     const isFav = favorites.some(f => f.id === item.id);

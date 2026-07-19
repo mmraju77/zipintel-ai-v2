@@ -118,14 +118,16 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     document.documentElement.lang = language;
   }, [language]);
 
-  const t = (key: string) => {
+  const t = React.useCallback((key: string) => {
     const translation = translations[key];
     if (!translation) return key;
     return translation[language];
-  };
+  }, [language]);
+
+  const value = React.useMemo(() => ({ language, setLanguage, t }), [language, t]);
 
   return (
-    <I18nContext.Provider value={{ language, setLanguage, t }}>
+    <I18nContext.Provider value={value}>
       {children}
     </I18nContext.Provider>
   );

@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Target } from 'lucide-react';
 import { useI18n } from '../lib/i18n';
 import { useParams } from 'react-router-dom';
 
@@ -11,8 +10,7 @@ interface GeoRadarProps {
 }
 
 export const GeoRadar: React.FC<GeoRadarProps> = ({ district, coords, language }) => {
-  const { t } = useI18n();
-  const { l2: districtId } = useParams<{ l2?: string }>();
+    const { l2: districtId } = useParams<{ l2?: string }>();
   
   const districtTitle = district ? `${district.replace(/-/g, ' ').toUpperCase()} SECTOR-01` : 'GLOBAL NODE';
 

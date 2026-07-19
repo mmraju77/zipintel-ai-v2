@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Shield, Cpu, Globe, Award, Linkedin, Mail, ExternalLink } from 'lucide-react';
+import { Shield, Cpu, Globe, Award, Linkedin, Mail } from 'lucide-react';
 
 export default function AboutUs() {
   return (

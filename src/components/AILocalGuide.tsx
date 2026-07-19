@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Bot, Sparkles, Zap, Globe, Home, Radio, Shield } from 'lucide-react';
+import { Bot, Sparkles, Zap, Globe, Home, Shield } from 'lucide-react';
 import { useI18n } from '../lib/i18n';
 import { getInfrastructureData } from '../data/infrastructureData';
 
@@ -10,7 +10,7 @@ interface AILocalGuideProps {
 }
 
 export const AILocalGuide: React.FC<AILocalGuideProps> = ({ districtId, countryId }) => {
-  const { t } = useI18n();
+  
   const stats = getInfrastructureData(districtId);
   
   const getAISummary = () => {

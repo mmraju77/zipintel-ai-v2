@@ -10,10 +10,10 @@ export default function CountryPage() {
   const { language } = useI18n();
   const { 
     countryId, l1, l2, l3, 
-    countryCode, region, zipCode 
+    countryCode, zipCode 
   } = useParams<{ 
     countryId?: string; l1?: string; l2?: string; l3?: string;
-    countryCode?: string; region?: string; zipCode?: string;
+    countryCode?: string;zipCode?: string;
   }>();
   
   const currentCountry = (countryCode || countryId || 'in').toLowerCase().trim();

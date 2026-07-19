@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { motion, AnimatePresence } from 'motion/react';
-import { Zap, Copy, Check, Loader2, Sparkles, Languages, Search, Hash, Download, MapPin, Database, ArrowLeft, Target, Cpu, Shield } from 'lucide-react';
+import { motion } from 'motion/react';
+import { Zap, Copy, Check, Loader2, Sparkles, Languages, Search, Hash, Download, MapPin, Database, Target } from 'lucide-react';
 import { useI18n } from '../lib/i18n';
-import { Link } from 'react-router-dom';
 
 export default function AITools() {
   const { t } = useI18n();

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Wifi, ShieldCheck, Cloud, Bell, ArrowRight, CheckCircle2, Globe, Sparkles } from 'lucide-react';
+import { Wifi, ShieldCheck, Cloud, Bell, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 interface AffiliateWidgetsProps {
   countryCode: string;

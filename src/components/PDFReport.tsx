@@ -1,5 +1,5 @@
 import React from 'react';
-import { FileText, Download, Printer } from 'lucide-react';
+import { FileText, Download } from 'lucide-react';
 
 interface PDFReportProps {
   zipCode?: string;
@@ -7,7 +7,7 @@ interface PDFReportProps {
   countryCode?: string;
 }
 
-export const PDFReport: React.FC<PDFReportProps> = ({ zipCode, region, countryCode }) => {
+export const PDFReport: React.FC<PDFReportProps> = ({}) => {
   const handlePrint = () => {
     window.print();
   };

@@ -8,14 +8,14 @@ const app = express();
 app.use(express.json());
 
 // Sitemap Route
-app.get("/sitemap.xml", (req, res) => {
+app.get("/sitemap.xml", (_req, res) => {
   const baseUrl = "https://www.zipintel-ai.com";
   res.header("Content-Type", "application/xml");
   res.send(generateSitemap(baseUrl));
 });
 
 // API Status Route
-app.get("/api/health", (req, res) => {
+app.get("/api/health", (_req, res) => {
   res.json({ 
     status: "ok", 
     aiMode: "DETERMINISTIC_LOCAL",
@@ -37,29 +37,29 @@ const wrapGetRoute = (path: string, handler: any) => {
 // DETERMINISTIC LOCAL FALLBACKS FOR ALL PREVIOUS API ROUTES
 // These are now handled client-side, but kept for legacy/redundancy safety 100% self-contained.
 
-wrapRoute("/api/ai/standardize-address", (req: Request, res: Response) => {
-  const { address } = req.body;
+wrapRoute("/api/ai/standardize-address", (_req: Request, res: Response) => {
+  const { address } = _req.body;
   res.json({ normalized: address || "Node Offline" });
 });
 
-wrapRoute("/api/ai/locality-insights", (req: Request, res: Response) => {
-  const { locality } = req.body;
+wrapRoute("/api/ai/locality-insights", (_req: Request, res: Response) => {
+  const { locality } = _req.body;
   res.json({ insight: `Localized infrastructure node verified at ${locality}. Deterministic local mode active.` });
 });
 
-wrapRoute("/api/postal/fetch-records", (req: Request, res: Response) => {
+wrapRoute("/api/postal/fetch-records", (_req: Request, res: Response) => {
   res.json({ records: [] }); // Client handles this deterministic generation now
 });
 
-wrapGetRoute("/api/postal/live-india/:query", (req: Request, res: Response) => {
+wrapGetRoute("/api/postal/live-india/:query", (_req: Request, res: Response) => {
   res.json({ Status: "Deterministic_Local_Active", PostOffice: [] });
 });
 
-wrapGetRoute("/api/postal/live-global/:country/:zip", (req: Request, res: Response) => {
+wrapGetRoute("/api/postal/live-global/:country/:zip", (_req: Request, res: Response) => {
   res.json({ status: "Local_Mode", places: [] });
 });
 
-wrapRoute("/api/ai/calculate-distance", (req: Request, res: Response) => {
+wrapRoute("/api/ai/calculate-distance", (_req: Request, res: Response) => {
   res.json({
     distance: "N/A",
     estimate: "Local Calculation Required",

@@ -8,7 +8,7 @@ interface SEOProps {
   routingValue: string;
 }
 
-export const SEOAutomation: React.FC<SEOProps> = ({ country, zip, bankName, routingLabel, routingValue }) => {
+export const SEOAutomation: React.FC<SEOProps> = ({ country, zip, bankName, routingValue }) => {
   // Dynamic Google Financial Schema Generator
   const schemaJson = {
     "@context": "https://schema.org",

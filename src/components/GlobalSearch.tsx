@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Search, Loader2, Zap, Hash, MapPin, ChevronRight, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { COUNTRIES, SearchResult } from '../types';
-import { POSTAL_DATA } from '../data/postalData';
 
 const ANCHOR_NODES = [
   { name: 'Visakhapatnam', code: 'in', region: 'andhra-pradesh', zip: '530001' },

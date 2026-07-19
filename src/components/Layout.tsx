@@ -9,7 +9,6 @@ import {
   Search, 
   Globe, 
   ChevronRight,
-  Database,
   Languages,
   LayoutDashboard,
   Info
