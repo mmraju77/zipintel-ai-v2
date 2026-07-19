@@ -136,12 +136,12 @@ export const GlobalSearch: React.FC = () => {
                 }
               }}
               placeholder="Global Search: Postal Code, Region, or Country..."
-              className="bg-transparent border-none focus:ring-0 w-full text-white font-medium pl-10 sm:pl-4 pr-4 py-3 sm:py-3 placeholder:text-slate-600 text-sm"
+              className="bg-transparent border-none focus:ring-0 w-full text-white font-medium pl-10 sm:pl-4 pr-4 py-3 sm:py-3 placeholder:text-slate-600 text-base"
             />
           </div>
           <button 
             onClick={() => results.length > 0 && handleSelect(results[0])}
-            className="w-full sm:w-auto bg-[#deff9a] hover:bg-[#c9f57d] text-midnight px-6 py-3 rounded-xl font-black text-[10px] uppercase tracking-widest transition-all flex items-center justify-center gap-2 active:scale-95 flex-shrink-0"
+            className="w-full sm:w-auto bg-[#deff9a] hover:bg-[#c9f57d] text-midnight px-6 py-3 rounded-xl font-black text-sm uppercase tracking-widest transition-all flex items-center justify-center gap-2 active:scale-95 flex-shrink-0"
           >
             ANALYZE <ArrowRight className="w-3 h-3 stroke-[3]" />
           </button>
@@ -157,7 +157,7 @@ export const GlobalSearch: React.FC = () => {
             className="absolute top-full left-0 right-0 mt-3 bg-[#0a0f1e] border border-[#deff9a]/10 rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.8)] z-[60] backdrop-blur-xl"
           >
             <div className="p-2 border-b border-white/5 bg-white/[0.02]">
-              <p className="text-[9px] font-black text-[#deff9a] uppercase tracking-[0.2em] px-3 py-1">Intelligence Suggestions</p>
+              <p className="text-xs font-black text-[#deff9a] uppercase tracking-[0.2em] px-3 py-1">Intelligence Suggestions</p>
             </div>
             {results.map((result, idx) => (
               <button
@@ -170,8 +170,8 @@ export const GlobalSearch: React.FC = () => {
                     {result.isLive ? <Zap className="w-5 h-5 text-[#deff9a]" /> : (result.postalCode ? <Hash className="w-5 h-5" /> : <MapPin className="w-5 h-5" />)}
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-white group-hover:text-[#deff9a] transition-colors">{result.name}</p>
-                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest leading-none mt-1">
+                    <p className="text-base font-bold text-white group-hover:text-[#deff9a] transition-colors">{result.name}</p>
+                    <p className="text-sm text-slate-500 font-bold uppercase tracking-widest leading-none mt-1">
                       {result.type} • {result.countryName} {result.postalCode && `• ${result.postalCode}`}
                     </p>
                   </div>

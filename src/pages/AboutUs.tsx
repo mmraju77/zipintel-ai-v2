@@ -12,13 +12,13 @@ export default function AboutUs() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-blue-500 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full mb-6 inline-block">
+          <span className="text-sm font-mono uppercase tracking-[0.3em] text-blue-500 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full mb-6 inline-block">
             Founding Vision
           </span>
-          <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white tracking-tight mb-4">
             Architecting the Future of <span className="text-blue-500">Global Financial Data</span>
           </h1>
-          <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-slate-400 text-xl max-w-2xl mx-auto leading-relaxed">
             ZipIntel AI is built on the principle of deterministic precision. We bridge the gap between global postal nodes and complex financial routing infrastructures.
           </p>
         </motion.div>
@@ -44,21 +44,21 @@ export default function AboutUs() {
             <div className="md:col-span-2 space-y-6">
               <div>
                 <h2 className="text-3xl font-bold text-white mb-1">Munchangi Matyaraju (mm Raju)</h2>
-                <p className="text-blue-400 font-mono text-sm uppercase tracking-widest font-semibold italic">Chief AI Architect & Founder</p>
+                <p className="text-blue-400 font-mono text-base uppercase tracking-widest font-semibold italic">Chief AI Architect & Founder</p>
               </div>
 
-              <p className="text-slate-300 leading-relaxed italic border-l-2 border-blue-500/50 pl-6 text-sm">
+              <p className="text-slate-300 leading-relaxed italic border-l-2 border-blue-500/50 pl-6 text-base">
                 "Our mission is to eliminate the 'last-mile' friction in global fintech. By indexing the core geometry of postal codes, we provide a mathematical foundation for routing that legacy systems simply cannot match."
               </p>
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="p-3 bg-slate-950/50 border border-slate-800/80 rounded-xl">
-                  <p className="text-[10px] text-slate-500 uppercase font-bold mb-1">Specialization</p>
-                  <p className="text-xs text-white font-mono">Neural Routing Matrix</p>
+                  <p className="text-sm text-slate-500 uppercase font-bold mb-1">Specialization</p>
+                  <p className="text-sm text-white font-mono">Neural Routing Matrix</p>
                 </div>
                 <div className="p-3 bg-slate-950/50 border border-slate-800/80 rounded-xl">
-                  <p className="text-[10px] text-slate-500 uppercase font-bold mb-1">Project Scale</p>
-                  <p className="text-xs text-white font-mono">17+ Jurisdictions</p>
+                  <p className="text-sm text-slate-500 uppercase font-bold mb-1">Project Scale</p>
+                  <p className="text-sm text-white font-mono">17+ Jurisdictions</p>
                 </div>
               </div>
 
@@ -73,7 +73,7 @@ export default function AboutUs() {
                 </a>
                 <a 
                   href="mailto:MooVi7g@gmail.com"
-                  className="flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white text-xs font-mono uppercase font-bold rounded-lg border border-slate-700 transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white text-sm font-mono uppercase font-bold rounded-lg border border-slate-700 transition-colors"
                 >
                   <Mail className="w-4 h-4" /> Direct Node
                 </a>
@@ -109,8 +109,8 @@ export default function AboutUs() {
               className="p-6 bg-slate-900/40 border border-slate-800/80 rounded-2xl"
             >
               <v.icon className="w-8 h-8 text-blue-500 mb-4" />
-              <h4 className="text-white font-bold mb-2 uppercase tracking-tight text-sm">{v.title}</h4>
-              <p className="text-xs text-slate-500 leading-relaxed">{v.desc}</p>
+              <h4 className="text-white font-bold mb-2 uppercase tracking-tight text-base">{v.title}</h4>
+              <p className="text-sm text-slate-500 leading-relaxed">{v.desc}</p>
             </motion.div>
           ))}
         </div>

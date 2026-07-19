@@ -15,7 +15,7 @@ export const BrandLogo: React.FC<{ className?: string }> = ({ className = "h-8" 
       {/* Brand Text Typography */}
       <span className="font-sans font-bold tracking-tight text-white text-xl">
         Zip<span className="text-blue-500 font-medium">Intel</span>
-        <span className="ml-1 text-xs font-mono px-1.5 py-0.5 bg-slate-800 text-emerald-400 rounded border border-slate-700">AI</span>
+        <span className="ml-1 text-sm font-mono px-1.5 py-0.5 bg-slate-800 text-emerald-400 rounded border border-slate-700">AI</span>
       </span>
     </div>
   );

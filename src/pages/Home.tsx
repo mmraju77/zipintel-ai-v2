@@ -105,7 +105,7 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-400 text-[10px] font-bold uppercase tracking-[0.2em]"
+          className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-400 text-sm font-bold uppercase tracking-[0.2em]"
         >
           <Zap className="w-3 h-3 text-gold" />
           <span>Post-SEO & AI Address Platform</span>
@@ -114,7 +114,7 @@ export default function Home() {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-5xl lg:text-8xl font-black tracking-tighter leading-tight lg:leading-none text-white uppercase italic break-words px-4"
+          className="text-4xl md:text-5xl lg:text-7xl font-black tracking-tighter leading-tight lg:leading-none text-white uppercase italic break-words px-4"
         >
           {t('heroTitle').split(' ')[0]} <span className="gold-gradient-text">{t('heroTitle').split(' ')[1] || 'Intel'}</span>
         </motion.h1>
@@ -136,7 +136,7 @@ export default function Home() {
                     <Zap className="w-4 h-4 text-gold animate-pulse" />
                   </div>
                   <div>
-                    <h3 className="text-[10px] font-black text-gold uppercase tracking-[0.2em] leading-none mb-1">{t('liveIntelligence')}</h3>
+                    <h3 className="text-sm font-black text-gold uppercase tracking-[0.2em] leading-none mb-1">{t('liveIntelligence')}</h3>
                     <p className="text-xl font-bold text-white uppercase italic">{t('deepSearchResults')}</p>
                   </div>
                 </div>
@@ -177,21 +177,21 @@ export default function Home() {
                             <Download className="w-3.5 h-3.5" />
                           </button>
                         </div>
-                        <span className="text-[8px] px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-500 font-black uppercase tracking-widest border border-emerald-500/20 mb-1">{t('verified')}</span>
-                        <span className="text-[8px] px-1.5 py-0.5 rounded bg-gold/10 text-gold font-black uppercase tracking-widest border border-gold/20">{t('liveStatus')}</span>
+                        <span className="text-sm px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-500 font-black uppercase tracking-widest border border-emerald-500/20 mb-1">{t('verified')}</span>
+                        <span className="text-sm px-1.5 py-0.5 rounded bg-gold/10 text-gold font-black uppercase tracking-widest border border-gold/20">{t('liveStatus')}</span>
                       </div>
                     </div>
 
                     <h3 className="text-xl font-black text-white group-hover:text-gold transition-colors uppercase italic mb-1">{item.name}</h3>
-                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-tighter mb-4">
+                    <p className="text-sm text-slate-500 font-bold uppercase tracking-tighter mb-4">
                       {item.type}
                     </p>
 
                     <div className="mt-auto pt-4 border-t border-slate-800/50 flex items-center justify-between">
-                      <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest flex items-center gap-1">
+                      <span className="text-sm font-bold text-slate-400 uppercase tracking-widest flex items-center gap-1">
                         <MapPin className="w-3 h-3" /> {item.countryName}
                       </span>
-                      <span className="text-lg font-black text-gold italic tracking-tighter">{item.postalCode}</span>
+                      <span className="text-xl font-black text-gold italic tracking-tighter">{item.postalCode}</span>
                     </div>
                     
                     {/* Interactive hover glow */}
@@ -207,7 +207,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="text-lg text-slate-500 font-medium max-w-2xl mx-auto"
+          className="text-xl text-slate-500 font-medium max-w-2xl mx-auto"
         >
           {t('heroSubtitle')}
         </motion.p>
@@ -221,7 +221,7 @@ export default function Home() {
               <Heart className="w-4 h-4 text-red-500 fill-red-500" />
             </div>
             <div>
-              <h3 className="text-[10px] font-black text-red-500 uppercase tracking-widest">{t('favorites')}</h3>
+              <h3 className="text-sm font-black text-red-500 uppercase tracking-widest">{t('favorites')}</h3>
               <p className="text-xl font-bold text-white uppercase italic">Bookmarked Localities</p>
             </div>
           </div>
@@ -237,8 +237,8 @@ export default function Home() {
               >
                 <MapPin className="w-4 h-4 text-slate-500 group-hover:text-gold transition-colors flex-shrink-0" />
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-bold text-white group-hover:text-gold transition-colors truncate">{item.name}</p>
-                  <p className="text-[9px] text-slate-600 font-bold uppercase tracking-widest truncate">{item.postalCode || 'REGIONAL'}</p>
+                  <p className="text-lg font-bold text-white group-hover:text-gold transition-colors truncate">{item.name}</p>
+                  <p className="text-sm text-slate-600 font-bold uppercase tracking-widest truncate">{item.postalCode || 'REGIONAL'}</p>
                 </div>
                 <button 
                   onClick={(e) => {
@@ -260,10 +260,10 @@ export default function Home() {
       <section className="space-y-6">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between px-2 gap-4">
           <div>
-            <h3 className="text-[10px] font-black text-slate-500 uppercase tracking-widest">{t('globalDirectories')}</h3>
+            <h3 className="text-sm font-black text-slate-500 uppercase tracking-widest">{t('globalDirectories')}</h3>
             <p className="text-xl font-bold text-white uppercase italic">{t('selectRegion')}</p>
           </div>
-          <Link to="/directories" className="text-gold text-xs font-bold uppercase tracking-widest hover:underline flex items-center gap-2">
+          <Link to="/directories" className="text-gold text-base font-bold uppercase tracking-widest hover:underline flex items-center gap-2">
             {t('viewAll')} <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -280,8 +280,8 @@ export default function Home() {
             >
               <MapPin className="w-5 h-5 text-gold group-hover:scale-110 transition-transform mt-1 flex-shrink-0" />
               <div className="flex-1 min-w-0">
-                <h3 className="text-base font-black text-white group-hover:text-gold transition-colors uppercase italic truncate">{country.name}</h3>
-                <p className="text-[9px] text-slate-500 font-bold uppercase tracking-tighter leading-tight truncate mt-0.5">
+                <h3 className="text-xl font-black text-white group-hover:text-gold transition-colors uppercase italic truncate">{country.name}</h3>
+                <p className="text-sm text-slate-500 font-bold uppercase tracking-tighter leading-tight truncate mt-0.5">
                   {country.description}
                 </p>
               </div>
@@ -304,14 +304,14 @@ export default function Home() {
             className="bg-gold rounded-2xl p-8 flex flex-col text-[#020617] relative overflow-hidden group shadow-[0_20px_50px_rgba(212,175,55,0.15)]"
           >
             <div className="relative z-10">
-              <h3 className="text-[10px] font-black uppercase tracking-widest mb-6 opacity-60">{t('aiParseTool')}</h3>
+              <h3 className="text-sm font-black uppercase tracking-widest mb-6 opacity-60">{t('aiParseTool')}</h3>
               <p className="text-2xl font-bold leading-tight mb-4">{t('normalizeFormats')}</p>
               <div className="space-y-2 mb-8">
-                <div className="h-9 bg-black/10 rounded flex items-center px-3 text-[10px] font-bold italic">Scanning UK Postcode...</div>
-                <div className="h-9 bg-black/10 rounded flex items-center px-3 text-xs font-black">EC1A 1BB → London</div>
+                <div className="h-9 bg-black/10 rounded flex items-center px-3 text-sm font-bold italic">Scanning UK Postcode...</div>
+                <div className="h-9 bg-black/10 rounded flex items-center px-3 text-base font-black">EC1A 1BB → London</div>
               </div>
             </div>
-            <div className="mt-auto text-xs font-black underline uppercase z-10 group-hover:no-underline flex items-center gap-2">
+            <div className="mt-auto text-base font-black underline uppercase z-10 group-hover:no-underline flex items-center gap-2">
               {t('launchTool')} <ArrowRight className="w-4 h-4" />
             </div>
             <div className="absolute -bottom-6 -right-6 text-black/10 rotate-12 group-hover:scale-110 transition-transform">
@@ -322,10 +322,10 @@ export default function Home() {
           {/* PSEO Status */}
           <div className="md:col-span-2 glass-card p-8 flex flex-col justify-between">
             <div className="flex justify-between items-center mb-6">
-              <span className="text-[10px] text-slate-500 uppercase font-black tracking-widest">{t('recentRewrites')}</span>
+              <span className="text-sm text-slate-500 uppercase font-black tracking-widest">{t('recentRewrites')}</span>
               <div className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                <span className="text-[10px] text-emerald-500 font-bold uppercase">{t('liveStatus')}</span>
+                <span className="text-sm text-emerald-500 font-bold uppercase">{t('liveStatus')}</span>
               </div>
             </div>
             <div className="space-y-3 mt-auto">
@@ -334,7 +334,7 @@ export default function Home() {
                 { path: '/usa/california/la', status: '200 OK' },
                 { path: '/germany/bayern/munich', status: '200 OK' }
               ].map((row, i) => (
-                <div key={i} className="flex justify-between text-[11px] py-1 border-b border-slate-800/50">
+                <div key={i} className="flex justify-between text-sm py-1 border-b border-slate-800/50">
                   <span className="text-slate-400 font-mono">{row.path}</span>
                   <span className="text-gold font-mono font-bold">{row.status}</span>
                 </div>
@@ -344,8 +344,8 @@ export default function Home() {
 
           {/* Network Stats */}
           <div className="glass-card p-8 flex flex-col items-center justify-center text-center">
-            <p className="text-[10px] text-slate-500 mb-2 uppercase font-black tracking-widest">{t('networkLatency')}</p>
-            <p className="text-5xl font-light text-white italic">14<span className="text-gold text-lg ml-1 font-bold">ms</span></p>
+            <p className="text-sm text-slate-500 mb-2 uppercase font-black tracking-widest">{t('networkLatency')}</p>
+            <p className="text-5xl font-light text-white italic">14<span className="text-gold text-xl ml-1 font-bold">ms</span></p>
             <div className="w-full h-1 bg-slate-800 rounded-full mt-6 overflow-hidden">
               <motion.div 
                 initial={{ width: 0 }}
@@ -359,8 +359,8 @@ export default function Home() {
           <div className="glass-card p-8 flex flex-col justify-between group cursor-pointer overflow-hidden relative">
             <Database className="w-8 h-8 text-slate-700 mb-6 group-hover:text-gold transition-colors" />
             <h4 className="text-xl font-bold text-white mb-2">{t('publicApi')}</h4>
-            <p className="text-xs text-slate-500 font-medium">{t('rawDatabaseAccess')}</p>
-            <div className="absolute top-2 right-2 text-[8px] bg-slate-900 border border-slate-800 px-1.5 py-0.5 rounded text-slate-600 uppercase font-bold">Beta</div>
+            <p className="text-xl text-slate-500 font-medium">{t('rawDatabaseAccess')}</p>
+            <div className="absolute top-2 right-2 text-xs bg-slate-900 border border-slate-800 px-1.5 py-0.5 rounded text-slate-600 uppercase font-bold">Beta</div>
           </div>
       </section>
 

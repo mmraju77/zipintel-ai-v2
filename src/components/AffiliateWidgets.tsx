@@ -74,8 +74,8 @@ export const AffiliateWidgets: React.FC<AffiliateWidgetsProps> = ({ countryCode,
               {offer.icon}
             </div>
             <div>
-              <p className="text-[10px] font-black text-[#deff9a] uppercase tracking-widest leading-none mb-1">Affiliate Partner</p>
-              <h3 className="text-lg font-black text-white tracking-tight leading-none">{offer.title}</h3>
+              <p className="text-sm font-black text-[#deff9a] uppercase tracking-widest leading-none mb-1">Affiliate Partner</p>
+              <h3 className="text-sm font-black text-white tracking-tight leading-none">{offer.title}</h3>
             </div>
           </div>
           
@@ -84,10 +84,10 @@ export const AffiliateWidgets: React.FC<AffiliateWidgetsProps> = ({ countryCode,
           </p>
 
           <div className="mt-auto">
-            <button className="w-full bg-[#deff9a] hover:bg-[#c9f57d] text-midnight py-4 rounded-xl font-black text-[11px] uppercase tracking-widest transition-all flex items-center justify-center gap-2 active:scale-95 group/btn">
+            <button className="w-full bg-[#deff9a] hover:bg-[#c9f57d] text-midnight py-4 rounded-xl font-black text-sm uppercase tracking-widest transition-all flex items-center justify-center gap-2 active:scale-95 group/btn">
               {offer.cta} <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
             </button>
-            <p className="text-center text-[9px] text-slate-500 mt-3 font-bold uppercase tracking-widest italic">
+            <p className="text-center text-sm text-slate-500 mt-3 font-bold uppercase tracking-widest italic">
               * Sponsor verified for {region} sector
             </p>
           </div>
@@ -106,10 +106,10 @@ export const AffiliateWidgets: React.FC<AffiliateWidgetsProps> = ({ countryCode,
         <div className="relative z-10">
           <div className="flex items-center gap-2 text-[#deff9a] mb-2">
             <Bell className="w-4 h-4" />
-            <span className="text-[10px] font-black uppercase tracking-[0.2em]">Live Intel Feed</span>
+            <span className="text-sm font-black uppercase tracking-[0.2em]">Live Intel Feed</span>
           </div>
-          <h3 className="text-xl font-black text-white tracking-tighter mb-2 italic">Hyper-Local Infrastructure Alerts</h3>
-          <p className="text-xs text-slate-500 font-medium leading-relaxed mb-6">
+          <h3 className="text-sm font-black text-white tracking-tighter mb-2 italic">Hyper-Local Infrastructure Alerts</h3>
+          <p className="text-sm text-slate-500 font-medium leading-relaxed mb-6">
             Get instant notifications on 5G node upgrades, local rental market shifts, and logistics expansions in <span className="text-white">{region}</span>.
           </p>
 
@@ -134,7 +134,7 @@ export const AffiliateWidgets: React.FC<AffiliateWidgetsProps> = ({ countryCode,
               className="flex items-center gap-3 p-4 rounded-xl bg-[#deff9a]/5 border border-[#deff9a]/20"
             >
               <CheckCircle2 className="w-5 h-5 text-[#deff9a]" />
-              <span className="text-xs font-black text-[#deff9a] uppercase tracking-widest">Node Registered</span>
+              <span className="text-sm font-black text-[#deff9a] uppercase tracking-widest">Node Registered</span>
             </motion.div>
           )}
 
@@ -146,7 +146,7 @@ export const AffiliateWidgets: React.FC<AffiliateWidgetsProps> = ({ countryCode,
                 </div>
               ))}
             </div>
-            <span className="text-[10px] text-slate-500 font-bold uppercase tracking-widest">
+            <span className="text-sm text-slate-500 font-bold uppercase tracking-widest">
               +1.2k Subscribed in this sector
             </span>
           </div>

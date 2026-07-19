@@ -76,7 +76,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
 
           <nav className="flex-1 px-4 py-2 space-y-1 overflow-y-auto">
-            <div className="text-[10px] uppercase tracking-widest text-slate-500 mb-2 px-2 font-bold">{t('navigation')}</div>
+            <div className="text-sm uppercase tracking-widest text-slate-500 mb-2 px-2 font-bold">{t('navigation')}</div>
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -86,12 +86,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 }`}
               >
                 <item.icon className={`w-5 h-5 flex-shrink-0 ${location.pathname === item.path ? 'text-gold' : 'text-slate-500'}`} />
-                {isSidebarOpen && <span className="text-sm font-semibold">{item.name}</span>}
+                {isSidebarOpen && <span className="text-base font-semibold">{item.name}</span>}
               </Link>
             ))}
 
             <div className="pt-8 mb-2">
-              <div className="text-[10px] uppercase tracking-widest text-slate-500 mb-2 px-2 font-bold">{t('directories')}</div>
+              <div className="text-sm uppercase tracking-widest text-slate-500 mb-2 px-2 font-bold">{t('directories')}</div>
               <div className="space-y-1">
                 {COUNTRIES.map((country) => (
                   <Link
@@ -102,7 +102,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     }`}
                   >
                     <MapPin className={`w-5 h-5 flex-shrink-0 ${location.pathname.startsWith(country.path) ? 'text-gold' : 'text-slate-500'}`} />
-                    {isSidebarOpen && <span className="text-sm font-semibold">{country.name}</span>}
+                    {isSidebarOpen && <span className="text-xl font-semibold">{country.name}</span>}
                   </Link>
                 ))}
               </div>
@@ -117,7 +117,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <ChevronRight className={`w-5 h-5 transition-transform ${isSidebarOpen ? 'rotate-180' : ''}`} />
             </button>
             {isSidebarOpen && (
-              <div className="text-[10px] text-slate-500 font-mono text-center border-t border-slate-800 pt-4">
+              <div className="text-sm text-slate-500 font-mono text-center border-t border-slate-800 pt-4">
                 v2.4.1 Regional Build
               </div>
             )}
@@ -149,7 +149,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </div>
                 <div className="space-y-8">
                   <div className="space-y-1">
-                    <div className="text-[10px] uppercase tracking-widest text-slate-500 mb-3 px-2 font-bold">{t('navigation')}</div>
+                    <div className="text-sm uppercase tracking-widest text-slate-500 mb-3 px-2 font-bold">{t('navigation')}</div>
                     {navItems.map((item) => (
                       <Link
                         key={item.path}
@@ -166,7 +166,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   </div>
 
                   <div>
-                    <div className="text-[10px] uppercase tracking-widest text-slate-500 mb-3 px-2 font-bold">{t('directories')}</div>
+                    <div className="text-sm uppercase tracking-widest text-slate-500 mb-3 px-2 font-bold">{t('directories')}</div>
                     <div className="grid grid-cols-1 gap-1">
                       {COUNTRIES.map((country) => (
                         <Link
@@ -198,10 +198,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <input 
                 type="text" 
                 placeholder={t('searchPlaceholder')} 
-                className="w-full bg-slate-900/50 border border-slate-800 rounded-xl py-3 pl-12 pr-12 text-sm focus:outline-none focus:border-gold transition-all text-white placeholder-slate-500 shadow-inner"
+                className="w-full bg-slate-900/50 border border-slate-800 rounded-xl py-3 pl-12 pr-12 text-base focus:outline-none focus:border-gold transition-all text-white placeholder-slate-500 shadow-inner"
               />
               <div className="absolute right-4 top-1/2 -translate-y-1/2 hidden md:block">
-                <span className="bg-slate-800 text-[10px] px-2 py-1 rounded border border-slate-700 text-slate-500 uppercase tracking-tighter">⌘ K</span>
+                <span className="bg-slate-800 text-sm px-2 py-1 rounded border border-slate-700 text-slate-500 uppercase tracking-tighter">⌘ K</span>
               </div>
             </div>
             <div className="flex items-center gap-6">
@@ -211,20 +211,20 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-800 bg-slate-900/50 hover:border-gold/50 transition-all group"
               >
                 <Languages className="w-4 h-4 text-slate-500 group-hover:text-gold" />
-                <span className="text-[10px] font-black uppercase tracking-widest text-slate-100 italic">
+                <span className="text-sm font-black uppercase tracking-widest text-slate-100 italic">
                   {language === 'en' ? 'తెలుగు' : 'English'}
                 </span>
               </button>
 
               <div className="text-right">
-                <p className="text-[10px] text-slate-500 uppercase font-black tracking-tighter">System Status</p>
+                <p className="text-sm text-slate-500 uppercase font-black tracking-tighter">System Status</p>
                 <div className="flex items-center gap-1.5 justify-end">
                   <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_#10b981]" />
-                  <p className="text-[11px] font-black text-emerald-500 uppercase">Optimized</p>
+                  <p className="text-sm font-black text-emerald-500 uppercase">Optimized</p>
                 </div>
               </div>
               <div className="w-10 h-10 rounded-full border-2 border-gold flex items-center justify-center bg-slate-800 shadow-[0_0_15px_rgba(212,175,55,0.2)]">
-                <span className="text-xs font-black text-gold">AI</span>
+                <span className="text-sm font-black text-gold">AI</span>
               </div>
             </div>
           </div>

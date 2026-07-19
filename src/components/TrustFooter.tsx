@@ -11,19 +11,19 @@ export const TrustFooter: React.FC = () => {
         {/* Column 1: Brand Authority Description */}
         <div className="md:col-span-2 space-y-3">
           <div className="flex items-center gap-2">
-            <span className="font-sans font-bold tracking-tight text-white text-lg">
+            <span className="font-sans font-bold tracking-tight text-white text-xl">
               Zip<span className="text-blue-500 font-medium">Intel</span> AI
             </span>
           </div>
-          <p className="text-xs text-slate-500 leading-relaxed max-w-sm">
+          <p className="text-sm text-slate-500 leading-relaxed max-w-sm">
             Oka scalable digital ecosystem for context-aware global financial routing matrix computations. Providing deterministic verification patterns for 17 target countries with zero latency.
           </p>
         </div>
 
         {/* Column 2: Quick Compliance / Legal Links */}
         <div>
-          <h4 className="text-xs font-mono uppercase tracking-widest text-slate-400 font-bold mb-3">Legal Registry</h4>
-          <ul className="space-y-2 text-xs font-mono">
+          <h4 className="text-sm font-mono uppercase tracking-widest text-slate-400 font-bold mb-3">Legal Registry</h4>
+          <ul className="space-y-2 text-sm font-mono">
             <li><Link to="/privacy" className="hover:text-emerald-400 transition-colors">Privacy Policy</Link></li>
             <li><Link to="/terms" className="hover:text-emerald-400 transition-colors">Terms of Service</Link></li>
             <li><Link to="/disclaimer" className="hover:text-emerald-400 transition-colors">Financial Disclaimer</Link></li>
@@ -32,16 +32,16 @@ export const TrustFooter: React.FC = () => {
 
         {/* Column 3: Trust & Security Indicators */}
         <div>
-          <h4 className="text-xs font-mono uppercase tracking-widest text-slate-400 font-bold mb-3">System Authority</h4>
+          <h4 className="text-sm font-mono uppercase tracking-widest text-slate-400 font-bold mb-3">System Authority</h4>
           <div className="space-y-2">
             {/* SSL & GDPR Badges */}
-            <div className="flex items-center gap-2 text-[10px] font-mono text-emerald-400 bg-emerald-500/5 border border-emerald-500/10 px-2 py-1 rounded w-fit">
+            <div className="flex items-center gap-2 text-sm font-mono text-emerald-400 bg-emerald-500/5 border border-emerald-500/10 px-2 py-1 rounded w-fit">
               <span>🔒 SSL SECURE NODE</span>
             </div>
-            <div className="flex items-center gap-2 text-[10px] font-mono text-blue-400 bg-blue-500/5 border border-blue-500/10 px-2 py-1 rounded w-fit">
+            <div className="flex items-center gap-2 text-sm font-mono text-blue-400 bg-blue-500/5 border border-blue-500/10 px-2 py-1 rounded w-fit">
               <span>🇪🇺 GDPR COMPLIANT</span>
             </div>
-            <div className="flex items-center gap-2 text-[10px] font-mono text-slate-400 bg-slate-800/50 border border-slate-700/50 px-2 py-1 rounded w-fit">
+            <div className="flex items-center gap-2 text-sm font-mono text-slate-400 bg-slate-800/50 border border-slate-700/50 px-2 py-1 rounded w-fit">
               <span>⚡ HOSTING: VERCEL EDGE</span>
             </div>
           </div>
@@ -51,10 +51,10 @@ export const TrustFooter: React.FC = () => {
 
       {/* Regulatory Disclosure Section */}
       <div className="max-w-6xl mx-auto mb-8 p-4 bg-slate-900/30 border border-slate-800/50 rounded-xl">
-        <h4 className="text-[10px] font-mono uppercase tracking-[0.2em] text-slate-500 font-bold mb-3 border-b border-slate-800 pb-2">
+        <h4 className="text-sm font-mono uppercase tracking-[0.2em] text-slate-500 font-bold mb-3 border-b border-slate-800 pb-2">
           Global Regulatory & Financial Disclosure
         </h4>
-        <div className="grid md:grid-cols-2 gap-6 text-[9px] font-mono leading-relaxed text-slate-500 italic">
+        <div className="grid md:grid-cols-2 gap-6 text-xs font-mono leading-relaxed text-slate-500 italic">
           <p>
             <strong className="text-slate-400 uppercase">Financial Accuracy:</strong> ZipIntel AI is a data analysis platform. Routing codes (IFSC, ABA, SWIFT, IBAN) are generated via deterministic interpolation. While we maintain a 99.9% verification baseline, users MUST verify all mission-critical data with their primary financial institution before executing transactions. We are not a bank or registered financial advisor.
           </p>
@@ -65,7 +65,7 @@ export const TrustFooter: React.FC = () => {
       </div>
 
       {/* Bottom Footer Fine Print */}
-      <div className="max-w-6xl mx-auto pt-6 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] font-mono text-slate-600 text-center md:text-left">
+      <div className="max-w-6xl mx-auto pt-6 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-mono text-slate-600 text-center md:text-left">
         <p>© {currentYear} ZipIntel AI Digital Infrastructure. All rights reserved.</p>
         <p className="text-slate-500">
           Founder Status:{" "}

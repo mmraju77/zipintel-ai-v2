@@ -74,13 +74,13 @@ export const AILocalGuide: React.FC<AILocalGuideProps> = ({ districtId, countryI
               </div>
             </div>
             <div>
-              <h2 className="text-white text-lg font-black tracking-tighter flex items-center gap-3">
+              <h2 className="text-white text-sm font-black tracking-tighter flex items-center gap-3">
                 AI LOCAL INTELLIGENCE
-                <span className="text-[9px] bg-[#deff9a]/10 text-[#deff9a] px-2.5 py-1 rounded-full border border-[#deff9a]/20 uppercase tracking-widest font-black">
+                <span className="text-sm bg-[#deff9a]/10 text-[#deff9a] px-2.5 py-1 rounded-full border border-[#deff9a]/20 uppercase tracking-widest font-black">
                   ZIPINTEL CORE v3.0
                 </span>
               </h2>
-              <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-1">
+              <p className="text-sm text-slate-500 font-bold uppercase tracking-widest mt-1">
                 Localized Narrative Synthesis • Sector: {districtId.toUpperCase()}
               </p>
             </div>
@@ -88,7 +88,7 @@ export const AILocalGuide: React.FC<AILocalGuideProps> = ({ districtId, countryI
           
           <div className="flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-[#deff9a]/5 border border-[#deff9a]/10">
             <div className="w-1.5 h-1.5 rounded-full bg-[#deff9a] animate-pulse shadow-[0_0_8px_rgba(222,255,154,0.8)]" />
-            <span className="text-[10px] font-black text-[#deff9a] uppercase tracking-widest">Neural Link Verified</span>
+            <span className="text-sm font-black text-[#deff9a] uppercase tracking-widest">Neural Link Verified</span>
           </div>
         </div>
 
@@ -97,7 +97,7 @@ export const AILocalGuide: React.FC<AILocalGuideProps> = ({ districtId, countryI
           <div className="space-y-4">
             <div className="flex items-center gap-2 text-[#deff9a]">
               <Zap className="w-4 h-4" />
-              <h3 className="text-[11px] font-bold uppercase tracking-[0.2em] italic">Logistics AI</h3>
+              <h3 className="text-sm font-bold uppercase tracking-[0.2em] italic">Logistics AI</h3>
             </div>
             <p className="text-[13px] text-slate-400 leading-relaxed font-medium">
               {ai.logistics}
@@ -107,7 +107,7 @@ export const AILocalGuide: React.FC<AILocalGuideProps> = ({ districtId, countryI
           <div className="space-y-4">
             <div className="flex items-center gap-2 text-[#deff9a]">
               <Globe className="w-4 h-4" />
-              <h3 className="text-[11px] font-bold uppercase tracking-[0.2em] italic">Connectivity</h3>
+              <h3 className="text-sm font-bold uppercase tracking-[0.2em] italic">Connectivity</h3>
             </div>
             <p className="text-[13px] text-slate-400 leading-relaxed font-medium">
               {ai.connectivity}
@@ -117,7 +117,7 @@ export const AILocalGuide: React.FC<AILocalGuideProps> = ({ districtId, countryI
           <div className="space-y-4">
             <div className="flex items-center gap-2 text-[#deff9a]">
               <Home className="w-4 h-4" />
-              <h3 className="text-[11px] font-bold uppercase tracking-[0.2em] italic">Economic Index</h3>
+              <h3 className="text-sm font-bold uppercase tracking-[0.2em] italic">Economic Index</h3>
             </div>
             <p className="text-[13px] text-slate-400 leading-relaxed font-medium">
               {ai.economic}
@@ -126,7 +126,7 @@ export const AILocalGuide: React.FC<AILocalGuideProps> = ({ districtId, countryI
         </div>
 
         {/* Footer Disclaimer */}
-        <div className="mt-10 pt-6 border-t border-slate-900 flex justify-between items-center text-[9px] font-bold text-slate-600 uppercase tracking-widest">
+        <div className="mt-10 pt-6 border-t border-slate-900 flex justify-between items-center text-sm font-bold text-slate-600 uppercase tracking-widest">
           <span>Source: ZipIntel AI Intelligence Node (Dynamic Local Synthesis)</span>
           <span className="flex items-center gap-1.5 grayscale opacity-50">
             <Shield className="w-3 h-3" />

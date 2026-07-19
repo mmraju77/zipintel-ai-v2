@@ -190,12 +190,12 @@ export default function AITools() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/20 text-gold text-[10px] uppercase font-black tracking-widest mb-4"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/20 text-gold text-sm uppercase font-black tracking-widest mb-4"
           >
             <Sparkles className="w-3 h-3" />
             <span>Premium AI Workspace</span>
           </motion.div>
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-white tracking-tighter uppercase italic leading-tight lg:leading-none break-words">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tighter uppercase italic leading-tight lg:leading-none break-words">
             AI <span className="gold-gradient-text uppercase">{t('aiUtilities').split(' ')[1] || 'Utilities'}</span>
           </h1>
           <p className="text-slate-500 max-w-xl mx-auto font-medium">
@@ -217,25 +217,25 @@ export default function AITools() {
                 </div>
                 <div>
                   <h2 className="text-xl font-black text-white uppercase italic leading-tight">{t('addressStandardizer')}</h2>
-                  <p className="text-[10px] text-slate-500 font-bold uppercase tracking-[3px]">{t('normalizeMessyInput')}</p>
+                  <p className="text-sm text-slate-500 font-bold uppercase tracking-[3px]">{t('normalizeMessyInput')}</p>
                 </div>
               </div>
 
               {error && (
                 <div className="p-3 bg-amber-500/10 border border-amber-500/20 rounded-xl flex items-center gap-3">
-                  <span className="w-5 h-5 rounded-lg bg-midnight flex items-center justify-center text-amber-500 font-black text-[10px]">!</span>
-                  <p className="text-[10px] text-amber-200/70 font-bold uppercase tracking-tight">{error}</p>
+                  <span className="w-5 h-5 rounded-lg bg-midnight flex items-center justify-center text-amber-500 font-black text-sm">!</span>
+                  <p className="text-sm text-amber-200/70 font-bold uppercase tracking-tight">{error}</p>
                 </div>
               )}
 
               <div className="space-y-6">
                 <div>
-                  <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-3 block italic">{t('pasteMessyAddress')}</label>
+                  <label className="text-sm font-black text-slate-500 uppercase tracking-widest mb-3 block italic">{t('pasteMessyAddress')}</label>
                   <textarea
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
                     placeholder="e.g. 1600 ampitheatre pkwy, mountain view, ca, 94043..."
-                    className="w-full h-32 bg-slate-900/40 border border-slate-800 rounded-2xl p-4 text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-gold/50 focus:bg-slate-900/60 transition-all font-medium text-sm resize-none"
+                    className="w-full h-32 bg-slate-900/40 border border-slate-800 rounded-2xl p-4 text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-gold/50 focus:bg-slate-900/60 transition-all font-medium text-base resize-none"
                   />
                 </div>
                 
@@ -249,7 +249,7 @@ export default function AITools() {
                   ) : (
                     <>
                       <Zap className="w-5 h-5 fill-midnight" />
-                      <span className="uppercase text-xs tracking-[4px] font-black italic">{t('standardizeAddress')}</span>
+                      <span className="uppercase text-sm tracking-[4px] font-black italic">{t('standardizeAddress')}</span>
                     </>
                   )}
                 </button>
@@ -263,18 +263,18 @@ export default function AITools() {
                 className="bg-slate-900/90 border-t border-slate-800 p-8 lg:p-10 relative"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-[10px] font-black text-gold uppercase tracking-[3px] italic uppercase">{t('verifiedOutput')}</span>
+                  <span className="text-sm font-black text-gold uppercase tracking-[3px] italic uppercase">{t('verifiedOutput')}</span>
                   <div className="flex gap-2">
                     <button
                       onClick={handleDownloadPDF}
-                      className="flex items-center gap-2 px-3 py-1.5 bg-slate-800/50 hover:bg-gold/20 hover:text-gold rounded-lg transition-all text-slate-400 text-[9px] font-black uppercase tracking-widest"
+                      className="flex items-center gap-2 px-3 py-1.5 bg-slate-800/50 hover:bg-gold/20 hover:text-gold rounded-lg transition-all text-slate-400 text-xs font-black uppercase tracking-widest"
                     >
                       <Download className="w-3 h-3" />
                       <span>PDF</span>
                     </button>
                     <button
                       onClick={copyToClipboard}
-                      className="flex items-center gap-2 px-3 py-1.5 bg-slate-800/50 hover:bg-gold/20 hover:text-gold rounded-lg transition-all text-slate-400 text-[9px] font-black uppercase tracking-widest"
+                      className="flex items-center gap-2 px-3 py-1.5 bg-slate-800/50 hover:bg-gold/20 hover:text-gold rounded-lg transition-all text-slate-400 text-xs font-black uppercase tracking-widest"
                     >
                       {copied ? <Check className="w-3 h-3 text-emerald-500" /> : <Copy className="w-3 h-3" />}
                       <span>{copied ? t('copied') : t('copy')}</span>
@@ -282,7 +282,7 @@ export default function AITools() {
                   </div>
                 </div>
                 <div className="bg-[#020617] p-6 rounded-2xl border border-gold/20 relative group">
-                  <p className="text-white font-bold text-lg leading-tight">{result}</p>
+                  <p className="text-white font-bold text-xl leading-tight">{result}</p>
                 </div>
               </motion.div>
             )}
@@ -301,28 +301,28 @@ export default function AITools() {
                 </div>
                 <div>
                   <h2 className="text-xl font-black text-white uppercase italic leading-tight">{t('distanceCalculator')}</h2>
-                  <p className="text-[10px] text-slate-500 font-bold uppercase tracking-[3px]">Geospatial Routing Node</p>
+                  <p className="text-sm text-slate-500 font-bold uppercase tracking-[3px]">Geospatial Routing Node</p>
                 </div>
               </div>
 
               <form onSubmit={handleCalculateDistance} className="space-y-6">
                 <div className="space-y-4">
                   <div>
-                    <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-3 block italic">{t('source')}</label>
+                    <label className="text-sm font-black text-slate-500 uppercase tracking-widest mb-3 block italic">{t('source')}</label>
                     <input
                       value={distSource}
                       onChange={(e) => setDistSource(e.target.value)}
                       placeholder="e.g. 531077 or Hukumpeta"
-                      className="w-full bg-slate-900/40 border border-slate-800 rounded-2xl p-4 text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-gold/50 focus:bg-slate-900/60 transition-all font-medium text-sm"
+                      className="w-full bg-slate-900/40 border border-slate-800 rounded-2xl p-4 text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-gold/50 focus:bg-slate-900/60 transition-all font-medium text-base"
                     />
                   </div>
                   <div>
-                    <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-3 block italic">{t('destination')}</label>
+                    <label className="text-sm font-black text-slate-500 uppercase tracking-widest mb-3 block italic">{t('destination')}</label>
                     <input
                       value={distDest}
                       onChange={(e) => setDistDest(e.target.value)}
                       placeholder="e.g. 530001 or Vizag"
-                      className="w-full bg-slate-900/40 border border-slate-800 rounded-2xl p-4 text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-gold/50 focus:bg-slate-900/60 transition-all font-medium text-sm"
+                      className="w-full bg-slate-900/40 border border-slate-800 rounded-2xl p-4 text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-gold/50 focus:bg-slate-900/60 transition-all font-medium text-base"
                     />
                   </div>
                 </div>
@@ -336,7 +336,7 @@ export default function AITools() {
                   ) : (
                     <>
                       <Target className="w-5 h-5 text-gold" />
-                      <span className="uppercase text-xs tracking-[4px] font-black italic">{t('calculate')}</span>
+                      <span className="uppercase text-sm tracking-[4px] font-black italic">{t('calculate')}</span>
                     </>
                   )}
                 </button>
@@ -352,15 +352,15 @@ export default function AITools() {
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-2">
                     <Database className="w-3 h-3 text-gold" />
-                    <span className="text-[10px] font-black text-gold uppercase tracking-[3px] italic">{t('transitInsight')}</span>
+                    <span className="text-sm font-black text-gold uppercase tracking-[3px] italic">{t('transitInsight')}</span>
                   </div>
                   <span className="text-xl font-black text-white">{distResult.distance}</span>
                 </div>
                 <div className="bg-[#020617] p-6 rounded-2xl border border-gold/20 border-l-4 space-y-3">
-                  <p className="text-slate-300 text-sm font-medium leading-relaxed italic">
+                  <p className="text-slate-300 text-base font-medium leading-relaxed italic">
                     "{distResult.insight}"
                   </p>
-                  <div className="flex items-center gap-2 text-[10px] font-bold text-slate-500 uppercase">
+                  <div className="flex items-center gap-2 text-sm font-bold text-slate-500 uppercase">
                     <Zap className="w-3 h-3 text-gold" /> Estimated Time: {distResult.estimate}
                   </div>
                 </div>
@@ -383,19 +383,19 @@ export default function AITools() {
                 </div>
                 <div>
                   <h2 className="text-xl font-black text-white uppercase italic leading-tight">{t('localityInsights')}</h2>
-                  <p className="text-[10px] text-slate-500 font-bold uppercase tracking-[3px]">{t('areaContextAnalysis')}</p>
+                  <p className="text-sm text-slate-500 font-bold uppercase tracking-[3px]">{t('areaContextAnalysis')}</p>
                 </div>
               </div>
 
               <div className="space-y-6">
                 <div>
-                  <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-3 block italic">{t('areaNameOrZip')}</label>
+                  <label className="text-sm font-black text-slate-500 uppercase tracking-widest mb-3 block italic">{t('areaNameOrZip')}</label>
                   <input
                     type="text"
                     value={postalQuery}
                     onChange={(e) => setPostalQuery(e.target.value)}
                     placeholder="e.g. 531077 or Beverly Hills"
-                    className="w-full bg-slate-900/40 border border-slate-800 rounded-2xl p-4 text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-gold/50 focus:bg-slate-900/60 transition-all font-medium text-sm shadow-inner"
+                    className="w-full bg-slate-900/40 border border-slate-800 rounded-2xl p-4 text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-gold/50 focus:bg-slate-900/60 transition-all font-medium text-base shadow-inner"
                   />
                 </div>
                 
@@ -409,7 +409,7 @@ export default function AITools() {
                   ) : (
                     <>
                       <Search className="w-5 h-5 text-gold" />
-                      <span className="uppercase text-xs tracking-[4px] font-black italic">{t('getAiInsight')}</span>
+                      <span className="uppercase text-sm tracking-[4px] font-black italic">{t('getAiInsight')}</span>
                     </>
                   )}
                 </button>
@@ -424,10 +424,10 @@ export default function AITools() {
               >
                 <div className="flex items-center gap-2 mb-4">
                   <Hash className="w-3 h-3 text-gold" />
-                  <span className="text-[10px] font-black text-gold uppercase tracking-[3px] italic">{t('localityBriefing')}</span>
+                  <span className="text-sm font-black text-gold uppercase tracking-[3px] italic">{t('localityBriefing')}</span>
                 </div>
                 <div className="bg-[#020617] p-6 rounded-2xl border border-gold/20 border-l-4">
-                  <p className="text-slate-300 text-sm font-medium leading-relaxed italic">
+                  <p className="text-slate-300 text-base font-medium leading-relaxed italic">
                     "{insight}"
                   </p>
                 </div>
@@ -439,16 +439,16 @@ export default function AITools() {
         {/* Footnotes / Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
            <div className="glass-card p-6 border-slate-800/50">
-              <p className="text-[8px] text-slate-500 font-black uppercase tracking-widest mb-1">Live Endpoint</p>
-              <p className="text-xs font-bold text-white font-mono">api.v4.normalize.zipintel.ai</p>
+              <p className="text-xs text-slate-500 font-black uppercase tracking-widest mb-1">Live Endpoint</p>
+              <p className="text-sm font-bold text-white font-mono">api.v4.normalize.zipintel.ai</p>
            </div>
            <div className="glass-card p-6 border-slate-800/50">
-              <p className="text-[8px] text-slate-500 font-black uppercase tracking-widest mb-1">Latency Avg</p>
-              <p className="text-xs font-bold text-emerald-500 font-mono">412ms</p>
+              <p className="text-xs text-slate-500 font-black uppercase tracking-widest mb-1">Latency Avg</p>
+              <p className="text-sm font-bold text-emerald-500 font-mono">412ms</p>
            </div>
            <div className="glass-card p-6 border-slate-800/50">
-              <p className="text-[8px] text-slate-500 font-black uppercase tracking-widest mb-1">Node Status</p>
-              <p className="text-xs font-bold text-gold font-mono uppercase">Decentralized / Active</p>
+              <p className="text-xs text-slate-500 font-black uppercase tracking-widest mb-1">Node Status</p>
+              <p className="text-sm font-bold text-gold font-mono uppercase">Decentralized / Active</p>
            </div>
         </div>
       </div>

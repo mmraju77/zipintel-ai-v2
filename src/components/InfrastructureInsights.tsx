@@ -143,16 +143,16 @@ export const InfrastructureInsights: React.FC<InfrastructureInsightsProps> = ({ 
           <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
             <Wifi className="w-5 h-5 text-blue-400" />
           </div>
-          <span className="text-[8px] font-black text-blue-400 bg-blue-400/10 px-2 py-0.5 rounded uppercase tracking-widest">{stats.internetStatus.type}</span>
+          <span className="text-xs font-black text-blue-400 bg-blue-400/10 px-2 py-0.5 rounded uppercase tracking-widest">{stats.internetStatus.type}</span>
         </div>
         <div className="space-y-4">
           <div>
-            <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest mb-1">{t('networkInternetStatus')}</p>
+            <p className="text-xs font-black text-slate-500 uppercase tracking-widest mb-1">{t('networkInternetStatus')}</p>
             <h3 className="text-xl font-black text-white italic tracking-tighter">{stats.internetStatus.avgSpeed}</h3>
           </div>
           <div className="p-2.5 bg-slate-950 border border-slate-800 rounded-2xl flex flex-col gap-1">
-            <span className="text-[8px] font-bold text-slate-500 uppercase">{t('activeProviders')}</span>
-            <span className="text-[9px] font-black text-slate-200">{stats.internetStatus.provider}</span>
+            <span className="text-xs font-bold text-slate-500 uppercase">{t('activeProviders')}</span>
+            <span className="text-xs font-black text-slate-200">{stats.internetStatus.provider}</span>
           </div>
         </div>
       </motion.div>
@@ -163,16 +163,16 @@ export const InfrastructureInsights: React.FC<InfrastructureInsightsProps> = ({ 
           <div className="w-10 h-10 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center">
             <Truck className="w-5 h-5 text-gold" />
           </div>
-          <span className="text-[8px] font-black text-gold bg-gold/10 px-2 py-0.5 rounded uppercase tracking-widest">{stats.logisticsHubs.coverage}</span>
+          <span className="text-xs font-black text-gold bg-gold/10 px-2 py-0.5 rounded uppercase tracking-widest">{stats.logisticsHubs.coverage}</span>
         </div>
         <div className="space-y-4">
           <div>
-            <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest mb-1">{t('logisticsCourierHubs')}</p>
+            <p className="text-xs font-black text-slate-500 uppercase tracking-widest mb-1">{t('logisticsCourierHubs')}</p>
             <h3 className="text-xl font-black text-white italic tracking-tighter">{stats.logisticsHubs.mainPartner}</h3>
           </div>
           <div className="p-2.5 bg-slate-950 border border-slate-800 rounded-2xl flex flex-col gap-1">
-            <span className="text-[8px] font-bold text-slate-500 uppercase">Nearest Hub Node</span>
-            <span className="text-[9px] font-black text-slate-200">{stats.logisticsHubs.nearestHub}</span>
+            <span className="text-xs font-bold text-slate-500 uppercase">Nearest Hub Node</span>
+            <span className="text-xs font-black text-slate-200">{stats.logisticsHubs.nearestHub}</span>
           </div>
         </div>
       </motion.div>
@@ -185,17 +185,17 @@ export const InfrastructureInsights: React.FC<InfrastructureInsightsProps> = ({ 
           </div>
           <div className="flex items-center gap-1.5 px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20">
             <div className="w-1 h-1 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="text-[8px] font-black text-emerald-500 uppercase tracking-widest">{stats.deliveryCheck.status}</span>
+            <span className="text-xs font-black text-emerald-500 uppercase tracking-widest">{stats.deliveryCheck.status}</span>
           </div>
         </div>
         <div className="space-y-4">
           <div>
-            <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest mb-1">{t('ecommerceDeliveryCheck')}</p>
+            <p className="text-xs font-black text-slate-500 uppercase tracking-widest mb-1">{t('ecommerceDeliveryCheck')}</p>
             <h3 className="text-xl font-black text-white italic tracking-tighter">{stats.deliveryCheck.eta}</h3>
           </div>
           <div className="p-2.5 bg-slate-950 border border-slate-800 rounded-2xl flex flex-col gap-1">
-            <span className="text-[8px] font-bold text-slate-500 uppercase">Active Channels</span>
-            <span className="text-[9px] font-black text-slate-200">{stats.deliveryCheck.platforms}</span>
+            <span className="text-xs font-bold text-slate-500 uppercase">Active Channels</span>
+            <span className="text-xs font-black text-slate-200">{stats.deliveryCheck.platforms}</span>
           </div>
         </div>
       </motion.div>
@@ -206,19 +206,19 @@ export const InfrastructureInsights: React.FC<InfrastructureInsightsProps> = ({ 
           <div className="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center">
             <Landmark className="w-5 h-5 text-indigo-400" />
           </div>
-          <span className="text-[8px] font-black text-indigo-400 bg-indigo-400/10 px-2 py-0.5 rounded uppercase tracking-widest">{stats.countryCode} REGIONAL</span>
+          <span className="text-xs font-black text-indigo-400 bg-indigo-400/10 px-2 py-0.5 rounded uppercase tracking-widest">{stats.countryCode} REGIONAL</span>
         </div>
         <div className="space-y-4">
           <div>
-            <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest mb-1">{t('regionalFinancialIdentifiers')}</p>
+            <p className="text-xs font-black text-slate-500 uppercase tracking-widest mb-1">{t('regionalFinancialIdentifiers')}</p>
             <h3 className="text-xl font-black text-white italic tracking-tighter uppercase">
               {stats.financeIdentifiers.code}
             </h3>
           </div>
           <div className="p-3 rounded-2xl bg-indigo-500/5 border border-indigo-500/10 space-y-2">
             <div className="flex justify-between items-center">
-              <span className="text-[8px] font-bold text-slate-500 uppercase">{stats.financeIdentifiers.label}</span>
-              <span className="text-[9px] font-black text-indigo-400 uppercase">Verified</span>
+              <span className="text-xs font-bold text-slate-500 uppercase">{stats.financeIdentifiers.label}</span>
+              <span className="text-xs font-black text-indigo-400 uppercase">Verified</span>
             </div>
             <div className="h-1 w-full bg-slate-800 rounded-full overflow-hidden">
               <div className="h-full bg-indigo-400 w-full" />
@@ -238,14 +238,14 @@ export const InfrastructureInsights: React.FC<InfrastructureInsightsProps> = ({ 
           <div className="w-10 h-10 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center">
             <CreditCard className="w-5 h-5 text-gold" />
           </div>
-          <span className="text-[10px] font-mono uppercase px-2 py-1 bg-slate-800 rounded border border-slate-700 text-slate-300">
+          <span className="text-sm font-mono uppercase px-2 py-1 bg-slate-800 rounded border border-slate-700 text-slate-300">
             Node: {code}
           </span>
         </div>
         <div className="space-y-4 relative z-10">
           <div>
-            <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest mb-1">{t('regionalFinancialIdentifiers')}</p>
-            <h3 className="text-sm font-black text-white tracking-widest uppercase">
+            <p className="text-xs font-black text-slate-500 uppercase tracking-widest mb-1">{t('regionalFinancialIdentifiers')}</p>
+            <h3 className="text-base font-black text-white tracking-widest uppercase">
               {matrix.bankName}
             </h3>
           </div>
@@ -253,20 +253,20 @@ export const InfrastructureInsights: React.FC<InfrastructureInsightsProps> = ({ 
           <div className="p-3 rounded-2xl bg-slate-950/80 border border-slate-800 space-y-3">
             <div className="flex justify-between items-center bg-gold/5 p-2 rounded-lg border border-gold/10">
                <div>
-                  <p className="text-[7px] font-bold text-slate-500 uppercase">{matrix.label}</p>
-                  <p className={`text-[10px] font-black tracking-widest ${matrix.themeColor}`}>{matrix.value}</p>
+                  <p className="text-xs font-bold text-slate-500 uppercase">{matrix.label}</p>
+                  <p className={`text-sm font-black tracking-widest ${matrix.themeColor}`}>{matrix.value}</p>
                </div>
                <div className="text-right">
-                  <p className="text-[7px] font-bold text-slate-500 uppercase">Clearance</p>
-                  <p className="text-[8px] font-black text-gold uppercase tracking-tighter">Synchronized</p>
+                  <p className="text-xs font-bold text-slate-500 uppercase">Clearance</p>
+                  <p className="text-xs font-black text-gold uppercase tracking-tighter">Synchronized</p>
                </div>
             </div>
 
             {matrix.subLabel && (
               <div className="flex justify-between items-center bg-gold/5 p-2 rounded-lg border border-gold/10">
                 <div>
-                    <p className="text-[7px] font-bold text-slate-500 uppercase">{matrix.subLabel}</p>
-                    <p className="text-[10px] font-black text-white tracking-widest">{matrix.subValue}</p>
+                    <p className="text-xs font-bold text-slate-500 uppercase">{matrix.subLabel}</p>
+                    <p className="text-base font-black text-white tracking-widest">{matrix.subValue}</p>
                 </div>
               </div>
             )}
