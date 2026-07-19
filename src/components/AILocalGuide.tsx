@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { motion } from 'motion/react';
 import { Bot, Sparkles, Zap, Globe, Home, Shield } from 'lucide-react';
-import { useI18n } from '../lib/i18n';
+
 import { getInfrastructureData } from '../data/infrastructureData';
 
 interface AILocalGuideProps {
@@ -9,7 +9,7 @@ interface AILocalGuideProps {
   countryId: string;
 }
 
-export const AILocalGuide: React.FC<AILocalGuideProps> = ({ districtId, countryId }) => {
+export const AILocalGuide: React.FC<AILocalGuideProps> = ({ districtId }) => {
   
   const stats = getInfrastructureData(districtId);
   
@@ -58,7 +58,7 @@ export const AILocalGuide: React.FC<AILocalGuideProps> = ({ districtId, countryI
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="mt-8 relative group"
+      className="mt-8 relative group hardware-accelerated"
     >
       {/* Glowing Border Wrapper */}
       <div className="absolute -inset-[1px] bg-[#deff9a]/30 rounded-[2rem] blur-[2px] group-hover:bg-[#deff9a]/50 transition-all duration-500" />

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const MonetizationNodes: React.FC<{ zone?: 'sidebar' | 'bottom' }> = ({ zone = 'bottom' }) => {
+export const MonetizationNodes: React.FC<{ zone?: 'sidebar' | 'bottom' }> = React.memo(({ zone = 'bottom' }) => {
   
   if (zone === 'sidebar') {
     return (
@@ -54,4 +54,4 @@ export const MonetizationNodes: React.FC<{ zone?: 'sidebar' | 'bottom' }> = ({ z
       </div>
     </div>
   );
-};
+});

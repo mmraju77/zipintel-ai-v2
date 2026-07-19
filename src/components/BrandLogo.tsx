@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const BrandLogo: React.FC<{ className?: string }> = ({ className = "h-8" }) => {
+export const BrandLogo: React.FC<{ className?: string }> = React.memo(({ className = "h-8" }) => {
   return (
     <div className={`flex items-center gap-2.5 ${className}`}>
       {/* Dynamic AI Portal Geometric Icon */}
@@ -19,4 +19,4 @@ export const BrandLogo: React.FC<{ className?: string }> = ({ className = "h-8" 
       </span>
     </div>
   );
-};
+});

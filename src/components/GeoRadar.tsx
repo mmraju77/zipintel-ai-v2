@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { useI18n } from '../lib/i18n';
+
 import { useParams } from 'react-router-dom';
 
 interface GeoRadarProps {

@@ -7,7 +7,7 @@ interface AffiliateWidgetsProps {
   region: string;
 }
 
-export const AffiliateWidgets: React.FC<AffiliateWidgetsProps> = ({ countryCode, region }) => {
+export const AffiliateWidgets: React.FC<AffiliateWidgetsProps> = React.memo(({ countryCode, region }) => {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
 
@@ -158,4 +158,4 @@ export const AffiliateWidgets: React.FC<AffiliateWidgetsProps> = ({ countryCode,
       </motion.div>
     </div>
   );
-};
+});

@@ -21,7 +21,7 @@ interface FinancialMetadata {
   themeColor: string;
 }
 
-export const InfrastructureInsights: React.FC<InfrastructureInsightsProps> = ({ districtId, language, countryCode, zipCode }) => {
+export const InfrastructureInsights: React.FC<InfrastructureInsightsProps> = React.memo(({ districtId, countryCode, zipCode }) => {
   const { t } = useI18n();
   const stats = getInfrastructureData(districtId);
 
@@ -287,4 +287,4 @@ export const InfrastructureInsights: React.FC<InfrastructureInsightsProps> = ({ 
       />
     </motion.div>
   );
-};
+});

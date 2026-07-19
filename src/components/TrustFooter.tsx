@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const TrustFooter: React.FC = () => {
+export const TrustFooter: React.FC = React.memo(() => {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -81,4 +81,4 @@ export const TrustFooter: React.FC = () => {
       </div>
     </footer>
   );
-};
+});

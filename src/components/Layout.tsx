@@ -60,7 +60,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {/* Mobile Header */}
       <header className="md:hidden flex items-center justify-between p-4 bg-[#020617] border-b border-slate-800 sticky top-0 z-50">
         <Logo />
-        <button onClick={toggleMobileMenu} className="text-slate-100 p-1">
+        <button onClick={toggleMobileMenu} className="text-slate-100 p-2 touch-target">
           {isMobileMenuOpen ? <X /> : <Menu />}
         </button>
       </header>
@@ -142,7 +142,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               >
                 <div className="flex items-center justify-between mb-10">
                   <Logo />
-                  <button onClick={toggleMobileMenu} className="text-slate-400 p-2 hover:bg-slate-800 rounded-lg">
+                  <button onClick={toggleMobileMenu} className="text-slate-400 p-2 touch-target hover:bg-slate-800 rounded-lg">
                     <X />
                   </button>
                 </div>

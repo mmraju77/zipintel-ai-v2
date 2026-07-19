@@ -9,7 +9,7 @@ interface Comment {
   time: string;
 }
 
-export const CommunityLayer: React.FC = () => {
+export const CommunityLayer: React.FC = React.memo(() => {
   const [votes, setVotes] = useState<Record<number, number>>({ 1: 14, 2: 5 });
   const [comments, setComments] = useState<Comment[]>([
     { id: 1, user: "DevNode_Hyd", badge: "Pro Contributor", text: "Verified this with SBI Paderu branch code, the IFSC sequence generation matches 100% correctly. Saved 10 minutes of manual checking.", votes: 14, time: "3 hours ago" },
@@ -82,4 +82,4 @@ export const CommunityLayer: React.FC = () => {
       </div>
     </div>
   );
-};
+});

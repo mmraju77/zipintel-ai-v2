@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 type TabType = 'qr' | 'json' | 'csv' | 'roi';
 
-export const UtilityHub: React.FC = () => {
+export const UtilityHub: React.FC = React.memo(() => {
   const [activeTab, setActiveTab] = useState<TabType>('qr');
   const [qrText, setQrText] = useState('https://www.zipintel-ai.com');
   const [jsonText, setJsonText] = useState('{"status": "success", "module": "IFSC Routing Engine", "nodeCount": 17}');
@@ -186,4 +186,4 @@ export const UtilityHub: React.FC = () => {
       </div>
     </div>
   );
-};
+});

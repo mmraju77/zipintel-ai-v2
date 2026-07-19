@@ -101,3 +101,24 @@
 .sidebar-link-active {
   @apply bg-slate-800 text-gold border border-slate-700 shadow-[inset_0_0_10px_rgba(212,175,55,0.05)];
 }
+
+@layer utilities {
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  .hardware-accelerated {
+    transform: translateZ(0);
+    will-change: transform, opacity;
+  }
+}
+
+html {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+section {
+  content-visibility: auto;
+  contain-intrinsic-size: 500px;
+}

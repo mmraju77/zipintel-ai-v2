@@ -154,7 +154,7 @@ export default function Home() {
                               e.stopPropagation();
                               toggleFavorite(item);
                             }}
-                            className="p-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-500 hover:text-red-500 transition-colors"
+                            className="p-3 sm:p-1.5 rounded-lg touch-target bg-slate-900 border border-slate-800 text-slate-500 hover:text-red-500 transition-colors"
                           >
                             <Heart className={`w-3.5 h-3.5 ${favorites.some(f => f.id === item.id) ? 'fill-red-500 text-red-500' : ''}`} />
                           </button>
@@ -164,7 +164,7 @@ export default function Home() {
                               e.stopPropagation();
                               handleDownloadReport(item);
                             }}
-                            className="p-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-500 hover:text-gold transition-colors"
+                            className="p-3 sm:p-1.5 rounded-lg touch-target bg-slate-900 border border-slate-800 text-slate-500 hover:text-gold transition-colors"
                           >
                             <Download className="w-3.5 h-3.5" />
                           </button>
@@ -225,7 +225,7 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: idx * 0.05 }}
-                className="glass-card p-4 group flex items-center gap-4 border-slate-800 hover:border-gold/30 transition-all"
+                className="glass-card p-4 group flex items-center gap-4 hardware-accelerated border-slate-800 hover:border-gold/30 transition-all"
               >
                 <MapPin className="w-4 h-4 text-slate-500 group-hover:text-gold transition-colors flex-shrink-0" />
                 <div className="flex-1 min-w-0">
@@ -238,7 +238,7 @@ export default function Home() {
                     e.stopPropagation();
                     toggleFavorite(item);
                   }}
-                  className="text-red-500 flex-shrink-0 ml-auto"
+                  className="text-red-500 flex-shrink-0 ml-auto p-2 sm:p-0 touch-target"
                 >
                   <Heart className="w-4 h-4 fill-red-500" />
                 </button>
@@ -255,7 +255,7 @@ export default function Home() {
             <h3 className="text-sm font-black text-slate-500 uppercase tracking-widest">{t('globalDirectories')}</h3>
             <p className="text-xl font-bold text-white uppercase italic">{t('selectRegion')}</p>
           </div>
-          <Link to="/directories" className="text-gold text-base font-bold uppercase tracking-widest hover:underline flex items-center gap-2">
+          <Link to="/directories" className="text-gold text-base font-bold uppercase tracking-widest hover:underline flex items-center gap-2 touch-target p-2">
             {t('viewAll')} <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -268,7 +268,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.05 }}
-              className="glass-card p-5 group flex items-start gap-4 border-slate-800 hover:border-gold/30 transition-all"
+              className="glass-card p-5 group flex items-start gap-4 hardware-accelerated border-slate-800 hover:border-gold/30 transition-all"
             >
               <MapPin className="w-5 h-5 text-gold group-hover:scale-110 transition-transform mt-1 flex-shrink-0" />
               <div className="flex-1 min-w-0">

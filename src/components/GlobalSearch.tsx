@@ -29,7 +29,7 @@ const ANCHOR_NODES = [
   { name: 'Dubai', code: 'ae', region: 'dubai', zip: '00000' }
 ];
 
-export const GlobalSearch: React.FC = () => {
+export const GlobalSearch: React.FC = React.memo(() => {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isSearching, setIsSearching] = useState(false);
@@ -151,7 +151,7 @@ export const GlobalSearch: React.FC = () => {
         {showDropdown && results.length > 0 && (
           <motion.div
             initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0, translateZ: 0 }}
             exit={{ opacity: 0, y: 10 }}
             className="absolute top-full left-0 right-0 mt-3 bg-[#0a0f1e] border border-[#deff9a]/10 rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.8)] z-[60] backdrop-blur-xl"
           >
@@ -183,4 +183,4 @@ export const GlobalSearch: React.FC = () => {
       </AnimatePresence>
     </div>
   );
-};
+});

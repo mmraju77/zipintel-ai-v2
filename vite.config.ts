@@ -1,9 +1,9 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import {defineConfig, loadEnv} from 'vite';
+import {defineConfig} from 'vite';
 
-export default defineConfig(({mode}) => {
+export default defineConfig(() => {
   
   return {
     plugins: [react(), tailwindcss()],
@@ -11,30 +11,6 @@ export default defineConfig(({mode}) => {
       alias: {
         '@': path.resolve(__dirname, '.'),
       },
-    },
-    build: {
-      rollupOptions: {
-        output: {
-          manualChunks(id) {
-            if (id.includes('node_modules')) {
-              if (id.includes('react') || id.includes('react-dom') || id.includes('scheduler')) {
-                return 'vendor-react';
-              }
-              if (id.includes('react-router') || id.includes('@remix-run')) {
-                return 'vendor-router';
-              }
-              if (id.includes('lucide-react')) {
-                return 'vendor-lucide';
-              }
-              if (id.includes('motion') || id.includes('framer-motion')) {
-                return 'vendor-motion';
-              }
-              return 'vendor-core';
-            }
-          }
-        }
-      },
-      chunkSizeWarningLimit: 1000
     },
     server: {
       // HMR is disabled in AI Studio via DISABLE_HMR  _env var.
